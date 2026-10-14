@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>최진규 · Game Designer Portfolio</title>
+<meta name="description" content="게임 기획자 최진규(Jinkyu Choi)의 포트폴리오 — 콘텐츠·시스템·전투 기획, 밸런스, 라이브 서비스 및 총괄PD 경험.">
+<meta name="theme-color" content="#0b0d12">
+<meta property="og:title" content="최진규 · Game Designer Portfolio">
+<meta property="og:description" content="콘텐츠 · 시스템 · 전투 기획 / 라이브 서비스 / 총괄PD">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235b6cff'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='white'%3EJC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('jc-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<style>
+:root{
+  --bg:#f5f6fa; --bg-2:#eceef5; --surface:#ffffff; --surface-2:#f7f8fc;
+  --line:rgba(17,20,40,.09); --line-2:rgba(17,20,40,.16);
+  --text:#12141c; --text-2:#3d4354; --muted:#6b7285;
+  --accent:#4b5cf0; --accent-2:#0ea5a4; --accent-soft:rgba(75,92,240,.09);
+  --hot:#e8590c; --shadow:0 1px 2px rgba(16,24,40,.05),0 8px 24px -12px rgba(16,24,40,.14);
+  --shadow-lg:0 24px 60px -24px rgba(16,24,40,.28);
+  --doc-bg:#eef0f6; --nav-bg:rgba(245,246,250,.78);
+  --radius:18px; --radius-sm:12px;
+  --font:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',system-ui,sans-serif;
+  --mono:ui-monospace,'SF Mono','Cascadia Code',Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a0c11; --bg-2:#0e1118; --surface:#12151d; --surface-2:#171b25;
+    --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.14);
+    --text:#eceef4; --text-2:#c3c8d5; --muted:#8a92a6;
+    --accent:#8c98ff; --accent-2:#3fd5c7; --accent-soft:rgba(140,152,255,.12);
+    --hot:#ff8a4c; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+    --shadow-lg:0 30px 70px -26px rgba(0,0,0,.8);
+    --doc-bg:#1b1f2a; --nav-bg:rgba(10,12,17,.72);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a0c11; --bg-2:#0e1118; --surface:#12151d; --surface-2:#171b25;
+  --line:rgba(255,255,255,.07); --line-2:rgba(255,255,255,.14);
+  --text:#eceef4; --text-2:#c3c8d5; --muted:#8a92a6;
+  --accent:#8c98ff; --accent-2:#3fd5c7; --accent-soft:rgba(140,152,255,.12);
+  --hot:#ff8a4c; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+  --shadow-lg:0 30px 70px -26px rgba(0,0,0,.8);
+  --doc-bg:#1b1f2a; --nav-bg:rgba(10,12,17,.72);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.7;
+  letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.25;letter-spacing:-.025em}
+p{margin:0}
+svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.skip{position:absolute;left:-999px;top:8px;z-index:100;background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px}
+.skip:focus{left:12px}
+
+/* progress + nav */
+.progress{position:fixed;inset:0 0 auto 0;height:4px;z-index:60;pointer-events:none;background:color-mix(in srgb,var(--line) 60%,transparent)}
+.progress span{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.nav{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:saturate(1.6) blur(16px);
+  -webkit-backdrop-filter:saturate(1.6) blur(16px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;gap:20px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}
+.mono{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;font-size:13px;letter-spacing:0;color:#fff;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+.brand-t{font-size:15px}
+.links{display:flex;gap:4px;margin-left:auto}
+.links a{font-size:14px;font-weight:500;color:var(--muted);padding:7px 12px;border-radius:999px;transition:color .2s,background .2s}
+.links a:hover{color:var(--text)}
+.links a.on{color:var(--text);background:var(--accent-soft)}
+.nav-act{display:flex;gap:6px}
+.icon-btn{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);
+  background:var(--surface);color:var(--text-2);cursor:pointer}
+.icon-btn:hover{color:var(--text);border-color:var(--line-2)}
+.i-moon{display:none}
+:root[data-theme="dark"] .i-sun{display:none} :root[data-theme="dark"] .i-moon{display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .i-sun{display:none}:root:not([data-theme="light"]) .i-moon{display:block}}
+.menu-btn{display:none}
+
+/* hero */
+.hero{position:relative;padding:clamp(48px,8vw,96px) 0 clamp(40px,6vw,72px);overflow:hidden}
+.hero-bg{position:absolute;inset:-20% -10% auto -10%;height:120%;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(40% 50% at 18% 20%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 70%),
+    radial-gradient(35% 45% at 85% 30%,color-mix(in srgb,var(--accent-2) 16%,transparent),transparent 70%);
+  -webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.hero-bg::after{content:"";position:absolute;inset:0;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:56px 56px;-webkit-mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent);mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent)}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--text-2);padding:6px 12px;border:1px solid var(--line-2);border-radius:999px;background:var(--surface)}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 0 var(--accent-2);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent-2) 60%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+h1{margin:22px 0 20px;display:flex;flex-direction:column;gap:6px}
+.h-en{font-size:clamp(44px,7.4vw,88px);font-weight:800;letter-spacing:-.045em;line-height:1;
+  background:linear-gradient(120deg,var(--text) 30%,var(--accent) 75%,var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.h-ko{font-size:clamp(18px,2vw,22px);font-weight:600;color:var(--muted);letter-spacing:.3em}
+.lead{font-size:clamp(16.5px,1.6vw,19px);color:var(--text-2);line-height:1.75;max-width:36em}
+.lead strong{color:var(--text);font-weight:700}
+.skills{list-style:none;padding:0;margin:24px 0 30px;display:flex;flex-wrap:wrap;gap:8px}
+.skills li{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--text-2)}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 20px;border-radius:12px;font-weight:600;font-size:15px;
+  border:1px solid var(--line-2);background:var(--surface);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+.btn.pri{background:var(--text);color:var(--bg);border-color:transparent}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tile{position:relative;margin:0;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:16/10;
+  border:1px solid var(--line);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.tile:nth-child(2n){transform:translateY(28px)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.tile:hover img{transform:scale(1.05)}
+.tile figcaption{position:absolute;inset:auto 0 0 0;padding:28px 12px 10px;display:flex;justify-content:space-between;align-items:end;gap:8px;
+  background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font-size:12px}
+.tile figcaption b{font-size:14px;font-weight:700}
+.tile figcaption span{font-family:var(--mono);opacity:.8;font-size:11px;white-space:nowrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:clamp(48px,7vw,80px) 0 0;border:1px solid var(--line);
+  border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
+.stats>div{padding:22px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column-reverse;gap:4px}
+.stats>div:first-child{border-left:0}
+.stats dt{font-size:13px;color:var(--muted)}
+.stats dd{margin:0;font-size:clamp(28px,3.4vw,38px);font-weight:800;letter-spacing:-.04em;line-height:1.1}
+.stats dd span{font-size:13px;font-weight:600;color:var(--accent);margin-left:6px;letter-spacing:0}
+
+/* sections */
+.sec{padding:clamp(72px,10vw,128px) 0}
+.sec.alt{background:var(--bg-2);border-block:1px solid var(--line)}
+.sec-head{margin-bottom:clamp(36px,5vw,56px);max-width:760px}
+.kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.sec-head h2,.thanks{font-size:clamp(30px,4.4vw,48px);font-weight:800;margin:10px 0 12px}
+.sec-sub{color:var(--muted);font-size:16.5px}
+
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.tl-item{position:relative;display:grid;grid-template-columns:96px 1fr;align-items:center;gap:14px;height:100%}
+.tl-dot{display:none}
+.tl-year{font-size:13.5px;font-weight:600;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.tl-card{display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-sm);box-shadow:var(--shadow);height:100%;transition:border-color .25s,transform .25s}
+a.tl-item:hover .tl-card{border-color:color-mix(in srgb,var(--accent) 45%,transparent);transform:translateX(3px)}
+.tl-thumb{width:52px;height:52px;border-radius:12px;object-fit:cover;flex:none;border:1px solid var(--line)}
+.tl-txt{display:flex;flex-direction:column;min-width:0;flex:1;line-height:1.35}
+.tl-co{font-size:11.5px;font-weight:600;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+.tl-title{font-weight:700;font-size:16.5px;margin:2px 0;display:flex;align-items:center;gap:8px}
+.tl-role{font-size:13.5px;color:var(--text-2);line-height:1.45}
+.now{font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.06em;color:#fff;background:var(--accent-2);padding:2px 7px;border-radius:999px}
+.tl-go{color:var(--muted);opacity:0;transition:opacity .25s}
+a.tl-item:hover .tl-go{opacity:1}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.chip.ghost{background:transparent;border:1px solid var(--line-2);color:var(--text-2)}
+.chip.hot{background:color-mix(in srgb,var(--hot) 14%,transparent);color:var(--hot)}
+
+/* project cards */
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:clamp(20px,3vw,36px);margin-bottom:24px}
+.proj-head{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding-bottom:22px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.proj-no{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--accent);width:44px;height:44px;display:grid;place-items:center;
+  border-radius:12px;background:var(--accent-soft);flex:none}
+.proj-ttl{flex:1;min-width:200px}
+.proj-ttl h3{font-size:clamp(21px,2.4vw,27px);font-weight:800}
+.proj-ttl p{color:var(--muted);font-size:14px;margin-top:2px}
+.proj-body{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,3.5vw,44px);align-items:start}
+.meta{display:grid;grid-template-columns:1fr;gap:0;margin:0 0 26px;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+.meta>div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:10px 14px;border-top:1px solid var(--line);background:var(--surface-2)}
+.meta>div:first-child{border-top:0}
+.meta dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.meta dd{margin:0;font-size:14.5px;font-weight:500}
+.meta>.role-row{background:var(--accent-soft)}
+.meta>.role-row dt{color:var(--accent)}
+.meta>.role-row dd{font-weight:700}
+.grp+.grp{margin-top:26px}
+.grp-l{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.role{font-family:var(--font);text-transform:none;letter-spacing:-.01em;font-size:13.5px;font-weight:700;color:var(--text);
+  padding:3px 10px;border-radius:8px;background:var(--accent-soft)}
+.blk+.blk{margin-top:22px}
+.blk h4{font-size:16.5px;font-weight:700;margin-bottom:8px;padding-left:12px;border-left:3px solid var(--accent)}
+.ticks{list-style:none;margin:0;padding:0}
+.ticks li{position:relative;padding-left:20px;color:var(--text-2);font-size:15px;line-height:1.65;margin:5px 0}
+.ticks li::before{content:"";position:absolute;left:4px;top:.68em;width:6px;height:6px;border-radius:2px;background:var(--accent-2);opacity:.85}
+.proj-media{display:grid;grid-template-columns:1fr;gap:12px;position:sticky;top:88px}
+.proj.compact .proj-body{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+
+/* zoomable figures */
+.zf{margin:0;min-width:0}
+.zoom{position:relative;display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;
+  background:var(--doc-bg);cursor:zoom-in;color:inherit}
+.zoom img{width:100%;height:auto;transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .3s}
+.zoom:hover img{transform:scale(1.025)}
+.zi{position:absolute;right:10px;top:10px;width:32px;height:32px;display:grid;place-items:center;border-radius:9px;
+  background:rgba(10,12,17,.6);color:#fff;opacity:0;transform:translateY(-4px);transition:.25s;backdrop-filter:blur(6px)}
+.zi svg{width:16px;height:16px}
+.zoom:hover .zi,.zoom:focus-visible .zi{opacity:1;transform:none}
+
+/* strip (horizontal) */
+.strip-wrap{margin-top:30px;padding-top:24px;border-top:1px dashed var(--line-2)}
+.strip{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.strip .zf{flex:none;width:172px;scroll-snap-align:start}
+
+/* case studies */
+.case{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);padding:clamp(28px,4vw,48px) 0;
+  border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0;padding-top:0}
+.case-text{position:sticky;top:96px;align-self:start}
+.case-no{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.case h3{font-size:clamp(21px,2.4vw,27px);font-weight:800;margin:8px 0 14px}
+.case .chips{margin-bottom:18px}
+.prose p{color:var(--text-2);font-size:15.5px;line-height:1.85}
+.prose p+p{margin-top:12px}
+.prose h4{font-size:17px;font-weight:700;margin:26px 0 10px;padding-left:12px;border-left:3px solid var(--accent)}
+.case-docs{display:flex;flex-direction:column;gap:22px;min-width:0}
+.doc-cap{font-size:13px;font-weight:600;color:var(--text-2);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.doc-cap::before{content:"";width:14px;height:2px;border-radius:2px;background:var(--accent)}
+.just{--h:200px;--maxh:360px;display:flex;flex-wrap:wrap;gap:10px}
+.just .zf{flex-grow:calc(var(--r)*1000);flex-basis:calc(var(--r)*var(--h));max-width:calc(var(--r)*var(--maxh))}
+.dg{padding:16px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow)}
+.sec.alt .dg{background:var(--surface)}
+
+/* AI Lab */
+.lab-stats{display:grid;grid-template-columns:repeat(3,1fr);margin:0 0 clamp(48px,6vw,72px);border:1px solid var(--line);
+  border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
+.lab-stats>div{padding:20px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column-reverse;gap:4px}
+.lab-stats>div:first-child{border-left:0}
+.lab-stats dt{font-size:13px;color:var(--muted)}
+.lab-stats dd{margin:0;font-size:clamp(28px,3.4vw,36px);font-weight:800;letter-spacing:-.04em;line-height:1.1}
+.lab-stats dd span{font-size:13px;font-weight:600;color:var(--accent-2);margin-left:6px;letter-spacing:0}
+.lab-sub{margin:clamp(48px,6vw,72px) 0 22px}
+.sec-head+.lab-sub{margin-top:0}
+.lab-sub h3{font-size:clamp(21px,2.4vw,26px);font-weight:800;margin-top:8px}
+.lab-sub .sec-sub{margin-top:8px;font-size:15px}
+.lab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.lab-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;transition:border-color .25s,box-shadow .25s}
+.lab-card:hover{border-color:color-mix(in srgb,var(--accent-2) 40%,transparent);box-shadow:var(--shadow-lg)}
+.lab-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0b0d12;isolation:isolate}
+.lab-media::before{content:"";position:absolute;inset:-30px;z-index:-1;background:var(--bg) center/cover;filter:blur(22px) brightness(.55) saturate(1.2)}
+.lab-media .zoom{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;background:transparent}
+.lab-media .zoom img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.lab-media .zoom:hover img{transform:scale(1.03)}
+.lab-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.lab-no{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-2);font-weight:600}
+.lab-body h4{font-size:21px;font-weight:800;margin:6px 0 12px}
+.lab-body .chips{margin-bottom:14px}
+.lab-desc{color:var(--text-2);font-size:15px;line-height:1.8;margin-bottom:10px}
+.lab-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:auto;padding-top:16px;font-size:12.5px;color:var(--muted)}
+.lab-tools span{font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-right:2px}
+.lab-tools b{font-weight:700;color:var(--text);padding:3px 10px;border-radius:8px;background:var(--surface-2);border:1px solid var(--line)}
+.lab-sim{border-top:0;padding-top:0}
+.lab-sim .ticks{margin-top:16px}
+.tool-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tool-card{display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:var(--radius);background:var(--surface);
+  border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .25s,border-color .25s}
+a.tool-card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 50%,transparent)}
+.tool-ic{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;color:var(--accent);background:var(--accent-soft);margin-bottom:6px}
+.tool-card h4{font-size:17px;font-weight:800}
+.tool-card p{font-size:14.5px;color:var(--text-2);line-height:1.7}
+.tool-go{margin-top:auto;padding-top:6px;font-size:13px;font-weight:700;color:var(--accent)}
+@media (max-width:960px){
+  .lab-grid{grid-template-columns:1fr}
+  .tool-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .lab-stats>div{padding:14px 14px}
+  .lab-stats dd span{display:block;margin:0}
+  .lab-body{padding:18px}
+}
+
+/* footer */
+.end{padding:clamp(80px,11vw,140px) 0 48px;background:
+  radial-gradient(50% 60% at 50% 0%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 70%)}
+.end-in{text-align:center;display:flex;flex-direction:column;align-items:center}
+.thanks{background:linear-gradient(120deg,var(--text),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;
+  font-size:clamp(44px,8vw,96px);letter-spacing:-.05em;padding-bottom:6px}
+.contacts{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:34px 0 56px}
+.ccard{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:260px;padding:18px 22px;border-radius:var(--radius);
+  background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);transition:transform .25s,border-color .25s;text-align:left}
+.ccard:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 50%,transparent)}
+.cl{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cv{font-size:18px;font-weight:700}
+.copy{font-size:12.5px;color:var(--muted);max-width:640px}
+.totop{position:fixed;right:20px;bottom:20px;z-index:40;display:flex;align-items:center;gap:10px;padding:5px 14px 5px 5px;border-radius:999px;
+  background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line-2);box-shadow:var(--shadow-lg);
+  opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .3s,transform .3s,border-color .2s}
+.totop.show{opacity:1;pointer-events:auto;transform:none}
+.totop:hover{border-color:color-mix(in srgb,var(--accent) 55%,transparent)}
+.ring{position:relative;width:44px;height:44px;flex:none}
+.ring svg{width:44px;height:44px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:3.5}
+.ring .rb{stroke:var(--line-2)}
+.ring .rf{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:119.38;stroke-dashoffset:119.38;transition:stroke-dashoffset .15s linear}
+.pct{position:absolute;inset:0;display:grid;place-items:center;font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.tt-txt{display:flex;flex-direction:column;line-height:1.2;min-width:74px}
+.tt-l{font-size:10.5px;color:var(--muted);font-weight:600}
+.tt-sec{font-size:13.5px;font-weight:700}
+.tt-up{width:16px;height:16px;color:var(--muted);transition:transform .2s,color .2s}
+.totop:hover .tt-up{color:var(--accent);transform:translateY(-2px)}
+@media (max-width:640px){
+  .totop{right:14px;bottom:14px;padding:4px}
+  .tt-txt,.tt-up{display:none}
+}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(6,7,10,.94);display:grid;grid-template-rows:auto 1fr auto;color:#eceef4}
+.lb[hidden]{display:none}
+.lb-top{display:flex;align-items:center;gap:16px;padding:12px 16px;font-size:13px}
+.lb-count{font-family:var(--mono);opacity:.8}
+.lb-hint{opacity:.5;margin-right:auto;font-size:12.5px}
+.lb-stage{overflow:auto;display:grid;place-items:center;padding:0 64px;min-height:0}
+.lb-stage img{max-width:100%;max-height:calc(100vh - 140px);max-height:calc(100dvh - 140px);width:auto;height:auto;border-radius:8px;cursor:zoom-in;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);background:#fff}
+.lb-stage.full{place-items:start center}
+.lb-stage.full img{max-width:none;max-height:none;cursor:zoom-out}
+.lb-cap{text-align:center;padding:12px 16px 18px;font-size:14px;font-weight:500;opacity:.9}
+.lb-btn{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);color:#fff;cursor:pointer}
+.lb-btn:hover{background:rgba(255,255,255,.14)}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:12px}.lb-next{right:12px}
+body.lb-open{overflow:hidden}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1080px){
+  .links a{padding:7px 9px;font-size:13.5px}
+}
+@media (max-width:960px){
+  .hero-in{grid-template-columns:1fr}
+  .tiles{max-width:640px}
+  .proj-body,.proj.compact .proj-body{grid-template-columns:1fr}
+  .proj-media{position:static;order:-1;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .case{grid-template-columns:1fr}
+  .case-text{position:static}
+  .timeline{grid-template-columns:1fr}
+}
+@media (max-width:960px){
+  .menu-btn{display:grid}
+  .links{position:fixed;top:64px;left:0;right:0;flex-direction:column;gap:2px;margin:0;padding:10px 16px 18px;
+    background:var(--bg);border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);
+    transform:translateY(-8px);opacity:0;pointer-events:none;transition:.25s}
+  .links.open{transform:none;opacity:1;pointer-events:auto}
+  .links a{padding:12px 14px;font-size:16px;border-radius:10px}
+  .nav-act{margin-left:auto}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stats>div:nth-child(3){border-left:0}
+  .stats>div:nth-child(n+3){border-top:1px solid var(--line)}
+  .stats>div{padding:16px 18px}
+  .tile:nth-child(2n){transform:translateY(16px)}
+  .tile figcaption{padding:22px 10px 8px}
+  .tile figcaption span{display:none}
+  .tl-item{grid-template-columns:1fr;gap:6px}
+  .tl-year{text-align:left;padding-left:4px}
+  .meta>div{grid-template-columns:78px 1fr;padding:9px 12px}
+  .proj-head{gap:12px}
+  .proj-no{width:38px;height:38px}
+  .just{--h:120px;--maxh:320px}
+  .dg{padding:12px}
+  .strip .zf{width:140px}
+  .lb-stage{padding:0 8px}
+  .lb-prev,.lb-next{top:auto;bottom:12px;transform:none}
+  .lb-cap{padding-bottom:70px}
+  .lb-hint{display:none}
+  .br-d{display:none}
+  .ccard{min-width:0;width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+@media print{
+  .nav,.progress,.totop,.lb{display:none!important}
+  .js .reveal{opacity:1;transform:none}
+  .proj,.case,.dg{break-inside:avoid}
+  .proj-media,.case-text{position:static}
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="맨 위로"><span class="mono">JC</span><span class="brand-t">Jinkyu Choi</span></a>
+    <nav class="links" id="navlinks" aria-label="섹션"><a href="#career" data-nav="career">Career</a><a href="#experience" data-nav="experience">Experience</a><a href="#system" data-nav="system">System</a><a href="#content" data-nav="content">Content</a><a href="#directing" data-nav="directing">Directing</a><a href="#ai" data-nav="ai">AI Lab</a><a href="#contact" data-nav="contact">Contact</a></nav>
+    <div class="nav-act">
+      <button class="icon-btn" id="theme" type="button" aria-label="라이트/다크 모드 전환">
+        <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menu" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navlinks">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="pulse"></span>Game Designer Portfolio</p>
+      <h1><span class="h-en">Jinkyu Choi</span><span class="h-ko">최진규</span></h1>
+      <p class="lead">신규 프로젝트의 방향성 수립부터 라이브 서비스 총괄PD까지.<br class="br-d">
+      <strong>콘텐츠 · 시스템 · 전투 기획</strong>과 밸런스 설계를 중심으로 게임을 만들어 왔습니다.</p>
+      <ul class="skills">
+        <li>Content Design</li><li>System Design</li><li>Combat Design</li><li>Balance</li><li>Live Service · PD</li><li>AI Tooling</li>
+      </ul>
+      <div class="cta">
+        <a class="btn pri" href="#experience">경력 살펴보기<span aria-hidden="true">↓</span></a>
+        <a class="btn" href="mailto:dontback84@gmail.com">Contact</a>
+      </div>
+    </div>
+    <div class="tiles" aria-label="대표 프로젝트"><figure class="tile"><img src="img/hero-dx.webp" alt="Project DX" width="720" height="450" decoding="async"><figcaption><b>Project DX</b><span>2025 – Now</span></figcaption></figure><figure class="tile"><img src="img/hero-ex.webp" alt="Project EX" width="720" height="450" decoding="async"><figcaption><b>Project EX</b><span>2024 – 2025</span></figcaption></figure><figure class="tile"><img src="img/hero-aot.webp" alt="Age of Titans" width="720" height="450" decoding="async"><figcaption><b>Age of Titans</b><span>2022 – 2024</span></figcaption></figure><figure class="tile"><img src="img/hero-aion.webp" alt="AION" width="720" height="450" decoding="async"><figcaption><b>AION</b><span>2016 – 2022</span></figcaption></figure></div>
+  </div>
+</section>
+
+<section class="sec" id="career" aria-labelledby="h-career">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="kicker">01 — Career History</p><h2 id="h-career">걸어온 길</h2>
+      <p class="sec-sub">e스포츠 국가대표에서 출발해, 라이브 · 해외 서비스와 신규 프로젝트를 거쳐 총괄PD까지.</p></div>
+    <ol class="timeline"><li><a class="tl-item reveal" href="#exp-dx"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2025 – 현재</span><span class="tl-card"><img src="img/tl-dx.webp" alt="Project DX" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">NEXON GAMES</span><span class="tl-title">Project DX<em class="now">NOW</em></span><span class="tl-role">Content Designer (컨셉, 성장, 크래프팅, 경제 등)</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><a class="tl-item reveal" href="#exp-ex"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2024 –</span><span class="tl-card"><img src="img/tl-ex.webp" alt="Project EX" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">NETMARBLE F&amp;C</span><span class="tl-title">Project EX</span><span class="tl-role">Director / System Designer (컨셉, 전투 등)</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><a class="tl-item reveal" href="#exp-aot"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2023 –</span><span class="tl-card"><img src="img/tl-aot.webp" alt="에이지오브타이탄" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">NETMARBLE F&amp;C</span><span class="tl-title">에이지오브타이탄</span><span class="tl-role">총괄PD / Director / System Designer</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><a class="tl-item reveal" href="#exp-aot2"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2022 –</span><span class="tl-card"><img src="img/tl-aot.webp" alt="에이지오브타이탄" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">NETMARBLE F&amp;C</span><span class="tl-title">에이지오브타이탄</span><span class="tl-role">Lead Game Designer / System Designer (전투, 시스템, UI/UX, 밸런스 등)</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><a class="tl-item reveal" href="#exp-remake"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2020 –</span><span class="tl-card"><img src="img/tl-remake.webp" alt="AION REMAKE" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">NC</span><span class="tl-title">AION REMAKE</span><span class="tl-role">Director / System Designer (컨셉, 콘텐츠, 전투, 시스템 등)</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><a class="tl-item reveal" href="#exp-aionm"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2018 –</span><span class="tl-card"><img src="img/tl-aionm.webp" alt="AION M" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">NC</span><span class="tl-title">AION M</span><span class="tl-role">Content Designer / System Designer (콘텐츠, 성장, 시스템 등)</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><a class="tl-item reveal" href="#exp-aion"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2016 –</span><span class="tl-card"><img src="img/tl-aion.webp" alt="AION" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">NC</span><span class="tl-title">AION</span><span class="tl-role">Content Designer (BM, 아이템, 이벤트, 경제 등)</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><a class="tl-item reveal" href="#exp-bc"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2015 –</span><span class="tl-card"><img src="img/tl-bc.webp" alt="배틀 크래셔" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">FLEXBALL (스타트업)</span><span class="tl-title">배틀 크래셔</span><span class="tl-role">Lead Game Designer (컨셉, 전투, 성장, 경제, 시스템 등)</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><a class="tl-item reveal" href="#exp-dn"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2014 –</span><span class="tl-card"><img src="img/tl-dn.webp" alt="드래곤네스트" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">EYEDENTITY GAMES</span><span class="tl-title">드래곤네스트</span><span class="tl-role">Content Designer (BM, 아이템, 이벤트, 경제 등)</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><a class="tl-item reveal" href="#exp-sd"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2010 –</span><span class="tl-card"><img src="img/tl-sd.webp" alt="SD건담 캡슐파이터" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">SOFTMAX</span><span class="tl-title">SD건담 캡슐파이터</span><span class="tl-role">Content Designer (해외 로컬라이징, BM, 아이템, 이벤트 등)</span></span><span class="tl-go" aria-hidden="true">→</span></span></a></li>
+<li><div class="tl-item reveal"><span class="tl-dot" aria-hidden="true"></span><span class="tl-year">2001 – 2002</span><span class="tl-card"><img src="img/tl-wcg.webp" alt="WCG Counter-Strike" width="192" height="192" loading="lazy" decoding="async" class="tl-thumb"><span class="tl-txt"><span class="tl-co">World Cyber Games</span><span class="tl-title">WCG Counter-Strike</span><span class="tl-role">국가대표</span></span></span></div></li></ol>
+  </div>
+</section>
+
+<section class="sec alt" id="experience" aria-labelledby="h-exp">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="kicker">02 — Experience</p><h2 id="h-exp">프로젝트 경험</h2>
+      <p class="sec-sub">각 프로젝트의 개요와 담당 역할입니다. 이미지를 누르면 크게 볼 수 있습니다.</p></div>
+    
+<article class="proj reveal" id="exp-dx">
+  <header class="proj-head">
+    <span class="proj-no">01</span>
+    <div class="proj-ttl"><h3>Project DX</h3><p>언리얼5 엔진 신규</p></div>
+    <div class="chips"><span class="chip">Unreal 5</span><span class="chip">New</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>오픈월드 생존RPG (PC/콘솔)</dd></div><div><dt>Company</dt><dd>NEXON GAMES / 프로젝트DX 기획실</dd></div><div class="role-row"><dt>My Role</dt><dd>Content Designer (컨셉, 성장, 크래프팅, 경제 등)</dd></div><div><dt>Period</dt><dd>2025.04 ~ 현재</dd></div></dl><div class="blks"><div class="blk"><h4>캐릭터 성장을 기반으로 한 콘텐츠 코어루프 설계</h4><ul class="ticks"><li>채집 자원 및 가공 재료의 해금 시점에 맞춰 캐릭터 장비 제작 플레이 흐름 정립</li><li>자원 컨셉에 부합하는 테크 레벨별 아트 방향성 및 성장 단계 설계</li><li>사냥 지역과 사유지 공간의 교차 플레이를 활용한 성장 체계 구축</li></ul></div><div class="blk"><h4>크래프팅 요소별 콘텐츠 기획 및 밸런스 조정</h4><ul class="ticks"><li>채집 방식, 제작/생산 시설, 제작 도구 등 크래프팅 전반의 콘텐츠 기획</li><li>제작 결과물의 특징과 부합하는 제작 재료 컨셉 기획</li><li>채집물 배치 지역 및 컨셉 정립 후 아트 리소스 제작과 연출 발주 진행</li><li>제작 결과물의 가치에 따른 재료 희귀도 및 제작 시간 밸런싱</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:1.7751"><button type="button" class="zoom" data-full="img/dx-1.webp" data-cap="Project DX · Project DX" aria-label="Project DX · Project DX 크게 보기"><img src="img/dx-1.t.webp" alt="Project DX · Project DX" width="600" height="338" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.3245"><button type="button" class="zoom" data-full="img/dx-2.webp" data-cap="Project DX · Durango World" aria-label="Project DX · Durango World 크게 보기"><img src="img/dx-2.t.webp" alt="Project DX · Durango World" width="600" height="453" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div>
+</article>
+
+<article class="proj reveal" id="exp-ex">
+  <header class="proj-head">
+    <span class="proj-no">02</span>
+    <div class="proj-ttl"><h3>Project EX</h3><p>언리얼5 엔진 신규</p></div>
+    <div class="chips"><span class="chip">Unreal 5</span><span class="chip">New</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>탈출형 배틀로얄 (PC/콘솔)</dd></div><div><dt>Company</dt><dd>Netmarble F&amp;C / 프로젝트EX 기획실</dd></div><div class="role-row"><dt>My Role</dt><dd>Director / System Designer (컨셉, 전투 등)</dd></div><div><dt>Period</dt><dd>2024.06 ~ 2025.04</dd></div></dl><div class="blks"><div class="blk"><h4>경영진 협의를 통한 게임 방향성 설계 및 계획 수립</h4><ul class="ticks"><li>타겟 국가 및 유사 장르 분석을 바탕으로 핵심 장르 정립 및 차별화 포인트 정의</li><li>Jira 기반의 마일스톤별 기획, 아트, 개발 일감 분할 및 목표일정 정리</li><li>Wiki를 활용한 개발 요구사항 체계화 및 검수 체크리스트 정립</li></ul></div><div class="blk"><h4>온라인 PvEvP 환경 구축을 위한 전투 템포 및 공방 시스템 설계</h4><ul class="ticks"><li>근접 전투와 슈팅 메카닉이 결합된 전투 시스템 기획</li><li>슈퍼 아머, 아머 브레이크, 가드, 회피 등 전투 반응성에 대한 메카닉 및 규칙 설계</li><li>전투 연산에 필요한 캐릭터 스탯 구조 및 연산 공식 수립</li></ul></div><div class="blk"><h4>플레이어 캐릭터 관련 기반 시스템 세팅 및 조립</h4><ul class="ticks"><li>캐릭터 상태 별 액션 정의와 애니메이션 리스트 정리 및 발주</li><li>캐릭터에 필요한 각종 물리 효과 및 카메라 세팅</li><li>캐릭터 행동에 대한 각종 파라미터(ABP, BP, Data Asset 등) 세팅</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:1.7757"><button type="button" class="zoom" data-full="img/ex-1.webp" data-cap="Project EX · Project EX 인게임" aria-label="Project EX · Project EX 인게임 크게 보기"><img src="img/ex-1.t.webp" alt="Project EX · Project EX 인게임" width="760" height="428" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.8095"><button type="button" class="zoom" data-full="img/ex-2.webp" data-cap="Project EX · Project EX 인게임" aria-label="Project EX · Project EX 인게임 크게 보기"><img src="img/ex-2.t.webp" alt="Project EX · Project EX 인게임" width="760" height="420" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div>
+</article>
+
+<article class="proj reveal" id="exp-aot">
+  <header class="proj-head">
+    <span class="proj-no">03</span>
+    <div class="proj-ttl"><h3>GRAND CROSS: AGE OF TITANS</h3><p>유니티 엔진 신규 / 라이브 · 총괄PD</p></div>
+    <div class="chips"><span class="chip">Unity</span><span class="chip">Live</span><span class="chip">PD</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>SLG, MMORTS (모바일 / PC)</dd></div><div><dt>Company</dt><dd>Netmarble F&amp;C / 프로젝트W 총괄PD</dd></div><div class="role-row"><dt>My Role</dt><dd>총괄PD / Director / System Designer</dd></div><div><dt>Period</dt><dd>2023.12 ~ 2024.05</dd></div></dl><div class="blks"><div class="blk"><h4>유저 소통을 최우선으로 한 라이브 서비스 운영</h4><ul class="ticks"><li>2023년 12월 PD 취임 직후 유저 대상 첫 인사 및 개발 방향성 공유</li><li>2024년 상반기 업데이트 로드맵 공개 및 매월 2회 이상 정기 소통 진행</li></ul></div><div class="blk"><h4>유저 피드백 기반의 유연한 업데이트 로드맵 수립</h4><ul class="ticks"><li>전체 개발 코스트의 50%는 사전 계획된 로드맵 콘텐츠 개발에 배정</li><li>나머지 50%는 유저 피드백을 실시간으로 반영한 빠른 개선 작업에 집중 투입</li></ul></div><div class="blk"><h4>주요 성과 및 업데이트 내역</h4><ul class="ticks"><li>2024년 1월 : 대규모 업데이트 ‘KvK 시즌2 아스가르드’ 오픈</li><li>2024년 2월 : 서버 대전 콘텐츠 ‘크로스디멘션’ 업데이트</li><li>2024년 3월 : ‘타이탄’ 성장 및 전투 대규모 밸런스 개편 진행</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:3.5819"><button type="button" class="zoom" data-full="img/aot-news-1.webp" data-cap="GRAND CROSS: AGE OF TITANS · 언론 보도" aria-label="GRAND CROSS: AGE OF TITANS · 언론 보도 크게 보기"><img src="img/aot-news-1.t.webp" alt="GRAND CROSS: AGE OF TITANS · 언론 보도" width="634" height="177" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:3.2978"><button type="button" class="zoom" data-full="img/aot-news-2.webp" data-cap="GRAND CROSS: AGE OF TITANS · 언론 보도" aria-label="GRAND CROSS: AGE OF TITANS · 언론 보도 크게 보기"><img src="img/aot-news-2.t.webp" alt="GRAND CROSS: AGE OF TITANS · 언론 보도" width="742" height="225" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div><div class="strip-wrap"><p class="doc-cap">유저 소통 기록</p><div class="strip gal"><figure class="zf" style="--r:0.5843"><button type="button" class="zoom" data-full="img/aot-c-1.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-1.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="364" height="623" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.5574"><button type="button" class="zoom" data-full="img/aot-c-2.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-2.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="364" height="653" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.5045"><button type="button" class="zoom" data-full="img/aot-c-3.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-3.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="338" height="670" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.509"><button type="button" class="zoom" data-full="img/aot-c-4.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-4.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="338" height="664" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.2472"><button type="button" class="zoom" data-full="img/aot-c-5.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-5.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="338" height="271" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.7789"><button type="button" class="zoom" data-full="img/aot-c-6.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-6.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="338" height="190" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.8387"><button type="button" class="zoom" data-full="img/aot-c-7.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-7.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="338" height="403" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.6525"><button type="button" class="zoom" data-full="img/aot-c-8.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-8.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="338" height="518" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.6955"><button type="button" class="zoom" data-full="img/aot-c-9.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-9.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="338" height="486" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.9311"><button type="button" class="zoom" data-full="img/aot-c-10.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-10.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="338" height="363" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.8689"><button type="button" class="zoom" data-full="img/aot-c-11.webp" data-cap="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" aria-label="GRAND CROSS: AGE OF TITANS · 유저 소통 기록 크게 보기"><img src="img/aot-c-11.t.webp" alt="GRAND CROSS: AGE OF TITANS · 유저 소통 기록" width="338" height="389" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div>
+</article>
+
+<article class="proj reveal" id="exp-aot2">
+  <header class="proj-head">
+    <span class="proj-no">04</span>
+    <div class="proj-ttl"><h3>GRAND CROSS: AGE OF TITANS</h3><p>유니티 엔진 신규 / 라이브</p></div>
+    <div class="chips"><span class="chip">Unity</span><span class="chip">New</span><span class="chip">Launch</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>SLG, MMORTS (모바일 / PC)</dd></div><div><dt>Company</dt><dd>Netmarble F&amp;C / 프로젝트W 총괄PD</dd></div><div class="role-row"><dt>My Role</dt><dd>Lead Game Designer / System Designer (전투, 시스템, UI/UX, 밸런스 등)</dd></div><div><dt>Period</dt><dd>2022.03 ~ 2023.11</dd></div></dl><div class="blks"><div class="blk"><h4>시스템/밸런스 위주의 기획 가이드 및 실무 진행</h4><ul class="ticks"><li>콘텐츠/시스템, UX/UI, 밸런스 파트 조직 관리 및 기획 가이드</li><li>인게임 및 아웃게임 핵심 요소의 시스템 개발 리딩</li><li>강철의 연금술사 콜라보, 각종 신규 콘텐츠 및 편의사항 개선 진행</li></ul></div><div class="blk"><h4>런칭 및 라이브 서비스를 위한 전략 수립</h4><ul class="ticks"><li>주요 마일스톤 운영 계획 수립 (22년 8월 북미베타, 23년 5월 넷마블 전사 테스트, 23년 8월 그랜드 런칭)</li><li>신규왕국 자동 생성 규칙 및 KvK 매칭 시스템 기획</li><li>넷마블 사업부와 인게임 경제 밸런스 및 BM 구조 조율</li></ul></div><div class="blk"><h4>라이브 서비스 전환 후 지표 분석 기반 대응</h4><ul class="ticks"><li>유저 유입 성향, 왕국 일차별 리텐션, 매출 지표 다각도 분석 및 업데이트 대응</li><li>콘텐츠 이용률 데이터 분석 기반의 콘텐츠 개선 기획 주도</li><li>인게임 재화 획득/소비 지표 추적을 통한 경제 밸런스 지속 개선</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:1.7757"><button type="button" class="zoom" data-full="img/aot-1.webp" data-cap="GRAND CROSS: AGE OF TITANS · GRAND CROSS: AGE OF TITANS" aria-label="GRAND CROSS: AGE OF TITANS · GRAND CROSS: AGE OF TITANS 크게 보기"><img src="img/aot-1.t.webp" alt="GRAND CROSS: AGE OF TITANS · GRAND CROSS: AGE OF TITANS" width="760" height="428" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:2.2093"><button type="button" class="zoom" data-full="img/aot-2.webp" data-cap="GRAND CROSS: AGE OF TITANS · 인게임" aria-label="GRAND CROSS: AGE OF TITANS · 인게임 크게 보기"><img src="img/aot-2.t.webp" alt="GRAND CROSS: AGE OF TITANS · 인게임" width="760" height="344" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div>
+</article>
+
+<article class="proj reveal" id="exp-remake">
+  <header class="proj-head">
+    <span class="proj-no">05</span>
+    <div class="proj-ttl"><h3>AION REMAKE</h3><p>언리얼4 엔진 신규</p></div>
+    <div class="chips"><span class="chip">Unreal 4</span><span class="chip">New</span><span class="chip">TF Lead</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>MMORPG (PC / CONSOLE)</dd></div><div><dt>Company</dt><dd>NC / AION 리메이크PD 기획팀</dd></div><div class="role-row"><dt>My Role</dt><dd>Director / System Designer (컨셉, 콘텐츠, 전투, 시스템 등)</dd></div><div><dt>Period</dt><dd>2020.07 ~ 2022.03</dd></div></dl><div class="blks"><div class="blk"><h4>프로젝트 전투 및 콘텐츠 방향성 설계</h4><ul class="ticks"><li>MMORPG 대규모 진형전투 강화를 위한 ‘시야 충돌’, ‘전방 주시’ 컨셉 제시</li><li>24시간 연맹 단위 점령 콘텐츠 기반 SvS(서버전) 코어루프 및 리그디자인 설계</li></ul></div><div class="blk"><h4>CEO 보고를 통한 신규프로젝트 승인 기여</h4><ul class="ticks"><li>AION CAMP의 미래 전략 과제 달성을 위해 직속 임원 발주로 신규 프로젝트 착수</li><li>TF장으로서 킥오프 멤버를 이끌며 신규 프로젝트 방향성 수립</li><li>약 6개월간 프로젝트 방향성 정립 및 CEO 프레젠테이션 준비를 진행했고, 2021년 1월 CEO 보고를 통해 공식 신규프로젝트 승격 후 인력 충원 진행</li></ul></div><div class="blk"><h4>전투 기반 시스템 설계 및 클래스 디자인</h4><ul class="ticks"><li>대표 클래스 3종(전사, 정찰자, 마법사) 직업 특성 및 스킬 디자인</li><li>타겟 상태에 따라 반응하는 스킬 스위칭 시스템 디자인</li><li>데미지 연산과 HUD 등 전투에 필요한 각종 기반 시스템 디자인</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:1.7716"><button type="button" class="zoom" data-full="img/remake-1.webp" data-cap="AION REMAKE · AION REMAKE 인게임" aria-label="AION REMAKE · AION REMAKE 인게임 크게 보기"><img src="img/remake-1.t.webp" alt="AION REMAKE · AION REMAKE 인게임" width="760" height="429" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.7552"><button type="button" class="zoom" data-full="img/remake-2.webp" data-cap="AION REMAKE · AION REMAKE 인게임" aria-label="AION REMAKE · AION REMAKE 인게임 크게 보기"><img src="img/remake-2.t.webp" alt="AION REMAKE · AION REMAKE 인게임" width="760" height="433" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div>
+</article>
+
+<article class="proj reveal" id="exp-aionm">
+  <header class="proj-head">
+    <span class="proj-no">06</span>
+    <div class="proj-ttl"><h3>AION M</h3><p>언리얼4 엔진 신규</p></div>
+    <div class="chips"><span class="chip">Unreal 4</span><span class="chip">New</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>MORPG (MOBILE / PC)</dd></div><div><dt>Company</dt><dd>NC / AION CAMP</dd></div><div class="role-row"><dt>My Role</dt><dd>Content Designer / System Designer (콘텐츠, 성장, 시스템 등)</dd></div><div><dt>Period</dt><dd>2018.07 ~ 2020.06 (약 1년 11개월 진행 후 드랍)</dd></div></dl><div class="blks"><div class="blk"><h4>핵앤슬래시 장르 콘텐츠 방향성 설계</h4><ul class="ticks"><li>영구 성장과 휘발성 성장이 접목된 시즌제 방식의 콘텐츠 코어루프 설계</li><li>캐릭터 성장 파츠 구분 및 성장 방향성 설계</li></ul></div><div class="blk"><h4>디바인 코어(스킬 커스터마이징) 콘텐츠 및 시스템 설계</h4><ul class="ticks"><li>재료 파밍을 통해 스킬을 자유롭게 커스터마이징할 수 있는 ‘디바인 코어’ 시스템 제안 및 설계</li><li>시스템 구현을 위해 아이템 테이블 구조 정의 및 아이템 ID 참조 방식의 커스터마이징 메카닉 수립</li></ul></div><div class="blk"><h4>플레이어 및 몬스터 캐릭터 기반 시스템 구현</h4><ul class="ticks"><li>캐릭터 파츠 구분 설계 및 필요 모션 리스트 산출을 통해 기본적인 이동과 전투 구현</li><li>캐릭터 수치 변경 및 성장 요소 반영이 용이하도록 테이블 구조 설계 후 주요 파라미터 값과 연산 규칙 적용</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:1.7757"><button type="button" class="zoom" data-full="img/aionm-1.webp" data-cap="AION M · AION M 인게임" aria-label="AION M · AION M 인게임 크게 보기"><img src="img/aionm-1.t.webp" alt="AION M · AION M 인게임" width="760" height="428" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div>
+</article>
+
+<article class="proj reveal" id="exp-aion">
+  <header class="proj-head">
+    <span class="proj-no">07</span>
+    <div class="proj-ttl"><h3>AION</h3><p>크라이 엔진 라이브</p></div>
+    <div class="chips"><span class="chip">CryEngine</span><span class="chip">Live</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>MMORPG (PC)</dd></div><div><dt>Company</dt><dd>NC / AION CAMP 콘텐츠디자인팀</dd></div><div class="role-row"><dt>My Role</dt><dd>Content Designer (BM, 아이템, 이벤트, 경제 등)</dd></div><div><dt>Period</dt><dd>2016.07 ~ 2018.06 (약 1년 11개월 후 신규프로젝트 TF 합류)</dd></div></dl><div class="blks"><div class="blk"><h4>AION REFLY 대규모 업데이트 F2P 전환 장비케어 진행</h4><ul class="ticks"><li>정액제 모델에서 F2P(부분유료화) 과금 구조로의 전환에 맞춰 기존 유저들의 장비 케어 전담</li><li>대규모 업데이트로 변경되는 콘텐츠 및 아이템 정책에 따라 아이템별 가치 변화를 예측하고, 사전에 법적 이슈 등을 체크 후 유저들의 아이템 교체를 진행</li></ul></div><div class="blk"><h4>F2P 유료화 아이템 및 상품 기획</h4><ul class="ticks"><li>국내 매출 지표와 인게임 아이템 잔존량 분석 데이터를 바탕으로 사업팀과 BM 조율 진행</li><li>주요 매출 상품인 장비 강화 소모품, 큐나샵, 미니온 등의 상품 구조 및 편의 기능 개편을 통한 매출 증대 기여</li></ul></div><div class="blk"><h4>PC방 순위 및 동시접속자 지표 방어를 위한 프로모션 진행</h4><ul class="ticks"><li>유저 접속률, 콘텐츠 참여 지표, 경쟁작 출시/업데이트 일정 수시 모니터링</li><li>타깃 유저층 성향 분석 기반의 라이브 이벤트를 수립하여 이탈 방지 및 지표 방어 달성</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:1.9097"><button type="button" class="zoom" data-full="img/aion-1.webp" data-cap="AION · AION REFLY 업데이트" aria-label="AION · AION REFLY 업데이트 크게 보기"><img src="img/aion-1.t.webp" alt="AION · AION REFLY 업데이트" width="550" height="288" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div>
+</article>
+
+<article class="proj reveal compact" id="exp-bc">
+  <header class="proj-head">
+    <span class="proj-no">08</span>
+    <div class="proj-ttl"><h3>배틀크래셔</h3><p>유니티 엔진 신규 / 라이브</p></div>
+    <div class="chips"><span class="chip">Unity</span><span class="chip">New</span><span class="chip">Live</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>수집형 RPG (MOBILE)</dd></div><div><dt>Company</dt><dd>FLEXBALL / 기획팀</dd></div><div class="role-row"><dt>My Role</dt><dd>Lead Game Designer (컨셉, 전투, 성장, 경제, 시스템 등)</dd></div><div><dt>Period</dt><dd>2015.07 ~ 2016.07 (약 1년 후 런칭)</dd></div></dl><div class="blks"><div class="blk"><h4>게임 전반 콘텐츠 및 시스템 기획</h4><ul class="ticks"><li>콘텐츠 전체 리스트 구성 및 코어 루프 기획</li><li>전투력 기반 RPG 스탯 구조 및 전투 연산 설계</li><li>몬스터, 장비, 경제 밸런스</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:1.7745"><button type="button" class="zoom" data-full="img/bc-1.webp" data-cap="배틀크래셔 · 배틀크래셔 인게임" aria-label="배틀크래셔 · 배틀크래셔 인게임 크게 보기"><img src="img/bc-1.t.webp" alt="배틀크래셔 · 배틀크래셔 인게임" width="724" height="408" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div>
+</article>
+
+<article class="proj reveal compact" id="exp-dn">
+  <header class="proj-head">
+    <span class="proj-no">09</span>
+    <div class="proj-ttl"><h3>드래곤네스트</h3><p>라이브</p></div>
+    <div class="chips"><span class="chip">Live</span><span class="chip">Global</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>MORPG (PC)</dd></div><div><dt>Company</dt><dd>EYEDENTITY GAMES / 아이템기획팀</dd></div><div class="role-row"><dt>My Role</dt><dd>Content Designer (BM, 아이템, 이벤트, 경제 등)</dd></div><div><dt>Period</dt><dd>2014.10 ~ 2015.06 (약 9개월)</dd></div></dl><div class="blks"><div class="blk"><h4>국내/해외 아이템 및 유료화 기획</h4><ul class="ticks"><li>블라인드 랭킹 방식의 중국 전용 VIP 시스템 기획</li><li>주요 유료 아이템(코스튬, 탑승물, 액세서리, 펫 등) 설계</li><li>해외 시장 대상 대규모 이벤트 콘텐츠 기획</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:1.7585"><button type="button" class="zoom" data-full="img/dn-1.webp" data-cap="드래곤네스트 · 드래곤네스트" aria-label="드래곤네스트 · 드래곤네스트 크게 보기"><img src="img/dn-1.t.webp" alt="드래곤네스트 · 드래곤네스트" width="670" height="381" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div>
+</article>
+
+<article class="proj reveal compact" id="exp-sd">
+  <header class="proj-head">
+    <span class="proj-no">10</span>
+    <div class="proj-ttl"><h3>SD건담 캡슐파이터</h3><p>라이브 / 해외 런칭</p></div>
+    <div class="chips"><span class="chip">Live</span><span class="chip">Global</span></div>
+  </header>
+  <div class="proj-body">
+    <div class="proj-info"><dl class="meta"><div><dt>Genre</dt><dd>액션 TPS (PC)</dd></div><div><dt>Company</dt><dd>SOFTMAX / 해외기획팀</dd></div><div class="role-row"><dt>My Role</dt><dd>Content Designer (해외 로컬라이징, BM, 아이템, 이벤트 등)</dd></div><div><dt>Period</dt><dd>2010.03 ~ 2014.06 (약 4년 3개월)</dd></div></dl><div class="blks"><div class="blk"><h4>해외 콘텐츠 및 유료화 기획</h4><ul class="ticks"><li>일본, 북미, 싱가포르 등 해외 런칭 메인 담당</li><li>총 8개 국가 전용 콘텐츠 설계 및 맞춤형 상품 기획</li><li>국가별 매출 데이터 분석을 통한 해외 퍼블리셔와의 콘텐츠 스펙 조율</li></ul></div></div></div>
+    <div class="proj-media gal"><figure class="zf" style="--r:1.7391"><button type="button" class="zoom" data-full="img/sd-1.webp" data-cap="SD건담 캡슐파이터 · SD건담 캡슐파이터" aria-label="SD건담 캡슐파이터 · SD건담 캡슐파이터 크게 보기"><img src="img/sd-1.t.webp" alt="SD건담 캡슐파이터 · SD건담 캡슐파이터" width="760" height="437" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="sec" id="system" aria-labelledby="h-sys">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="kicker">03 — System Design</p><h2 id="h-sys">시스템 기획</h2>
+      <p class="sec-sub">데이터 구조부터 전투 판정, 카메라·조작, 몬스터 AI까지 — 실제 작성한 기획 문서와 함께 소개합니다.</p></div>
+    
+<article class="case reveal" id="system-01">
+  <div class="case-text">
+    <p class="case-no">System 01</p>
+    <h3>데이터 구조 및 규칙 설계</h3>
+    <div class="chips"><span class="chip ghost">드래곤네스트</span><span class="chip ghost">AION M</span><span class="chip ghost">Project EX</span></div>
+    <div class="prose"><p>과거에 경험해본 일부 개발 조직에서는 데이터 테이블 구조를 프로그램팀에서 일방적으로 제작해주는 경우가 많았습니다. 이런 경우 테이블에 대한 가독성이 떨어지고, 불필요한 데이터까지 반복적으로 작업해야 하는 비효율적인 상황이 반복되는 것을 경험해 보았습니다.</p><p>그래서 저는 시스템 기획 시 데이터 테이블을 먼저 설계하고, 해당 데이터로 시스템이 돌아갈 수 있을지 구상하며 각 컬럼의 기능 설명과 시스템 플로우를 함께 디자인했습니다.</p><p>그리고 개발 논의 시 직접 설계한 데이터 테이블과 가데이터 값을 먼저 반영한 후 프로그램팀과 조율을 통해 수정하는 방식으로 작업을 진행했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">드래곤네스트 · VIP 시스템 문서</p><div class="just gal"><figure class="zf" style="--r:0.8034"><button type="button" class="zoom" data-full="img/sys-dnvip.webp" data-cap="드래곤네스트 · VIP 시스템 문서" aria-label="드래곤네스트 · VIP 시스템 문서 크게 보기"><img src="img/sys-dnvip.t.webp" alt="드래곤네스트 · VIP 시스템 문서" width="760" height="946" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">프로젝트EX · 총기 시스템 문서</p><div class="just gal"><figure class="zf" style="--r:0.6856"><button type="button" class="zoom" data-full="img/sys-exgun-1.webp" data-cap="프로젝트EX · 총기 시스템 문서" aria-label="프로젝트EX · 총기 시스템 문서 크게 보기"><img src="img/sys-exgun-1.t.webp" alt="프로젝트EX · 총기 시스템 문서" width="748" height="1091" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.7097"><button type="button" class="zoom" data-full="img/sys-exgun-2.webp" data-cap="프로젝트EX · 총기 시스템 문서" aria-label="프로젝트EX · 총기 시스템 문서 크게 보기"><img src="img/sys-exgun-2.t.webp" alt="프로젝트EX · 총기 시스템 문서" width="748" height="1054" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">아이온M · 활강 시스템 문서</p><div class="just gal"><figure class="zf" style="--r:0.8164"><button type="button" class="zoom" data-full="img/sys-glide.webp" data-cap="아이온M · 활강 시스템 문서" aria-label="아이온M · 활강 시스템 문서 크게 보기"><img src="img/sys-glide.t.webp" alt="아이온M · 활강 시스템 문서" width="556" height="681" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="system-02">
+  <div class="case-text">
+    <p class="case-no">System 02</p>
+    <h3>아이템 및 성장 시스템</h3>
+    <div class="chips"><span class="chip ghost">배틀크래셔</span></div>
+    <div class="prose"><p>아트 리소스는 최소화해야 하는 상황에서 아이템 반복 파밍에 대한 PLC를 높이기 위해 퍼즐 요소를 접목한 문장 아이템과 성장 관련 기획 업무를 진행했습니다. 오각 형태의 문장이 합쳐져 있는 파츠를 가장 효율적으로 배치하여 빈공간을 최소화하는 퍼즐 요소가 접목된 성장 요소 중 하나였습니다.</p><p>능력치가 낮거나, 장착할 수 없는 형태의 문장이 나오더라도 아이템의 가치를 보존하기 위해 각종 성장 시스템이었던 강화, 합성, 형상 변화 등 다양한 성장 시스템의 설계를 진행했습니다.</p><p>문장 자체에 대한 기본적인 속성과 능력치는 아이템 테이블과 비슷한 방식으로 설계하여, 인벤토리에 보관이 가능하도록 하였습니다. 그리고 강화, 합성, 형상 변화 등에 대한 커스터마이징 시스템은 문장 아이템 테이블에 등록된 ID를 호출하여 변환해주는 방식으로 설계했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">배틀 크래셔 · 문장 아이템 시스템</p><div class="just gal"><figure class="zf" style="--r:0.7265"><button type="button" class="zoom" data-full="img/sys-bc-1.webp" data-cap="배틀 크래셔 · 문장 아이템 시스템" aria-label="배틀 크래셔 · 문장 아이템 시스템 크게 보기"><img src="img/sys-bc-1.t.webp" alt="배틀 크래셔 · 문장 아이템 시스템" width="757" height="1042" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.7148"><button type="button" class="zoom" data-full="img/sys-bc-2.webp" data-cap="배틀 크래셔 · 문장 아이템 시스템" aria-label="배틀 크래셔 · 문장 아이템 시스템 크게 보기"><img src="img/sys-bc-2.t.webp" alt="배틀 크래셔 · 문장 아이템 시스템" width="752" height="1052" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.734"><button type="button" class="zoom" data-full="img/sys-bc-3.webp" data-cap="배틀 크래셔 · 문장 아이템 시스템" aria-label="배틀 크래셔 · 문장 아이템 시스템 크게 보기"><img src="img/sys-bc-3.t.webp" alt="배틀 크래셔 · 문장 아이템 시스템" width="709" height="966" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.7133"><button type="button" class="zoom" data-full="img/sys-bc-4.webp" data-cap="배틀 크래셔 · 문장 아이템 시스템" aria-label="배틀 크래셔 · 문장 아이템 시스템 크게 보기"><img src="img/sys-bc-4.t.webp" alt="배틀 크래셔 · 문장 아이템 시스템" width="744" height="1043" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="system-03">
+  <div class="case-text">
+    <p class="case-no">System 03</p>
+    <h3>플레이어 카메라 및 조작 규칙</h3>
+    <div class="chips"><span class="chip ghost">AION M</span></div>
+    <div class="prose"><p>게임의 플레이 방향성이 정해진 후 바로 플레이의 기본 조작 방식과 시점에 대한 상세 설계를 먼저 진행했습니다. 조작과 시점이 확정되지 않은 상황에서는 전투 기반 시스템, HUD, 캐릭터 애니메이션 등의 기획이 어렵다는 것을 경험한 적이 있기 때문에 가장 먼저 해당 업무를 진행했습니다.</p><p>모바일 플랫폼에서 특히 불편한 카메라 조작을 최소화할 수 있도록 캐릭터의 이동 방향과 타겟 여부에 따라 자동으로 카메라 방향이 변경되고, 이동 속도에 따라 카메라 줌인/줌아웃이 조정되도록 설계했습니다.</p><p>지형지물과의 카메라 충돌이 너무 자주 발생할 경우 카메라 위치가 수시로 변경되기 때문에 유저의 피로가 상승할 수 있습니다. 그래서 카메라의 지형지물 충돌은 최소화하고, 캐릭터가 보이지 않을 때에는 캐릭터 실루엣을 노출시켜 플레이에 지장이 없도록 구현을 진행했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">아이온 M · 카메라 및 조작 규칙 문서</p><div class="just gal"><figure class="zf" style="--r:1.3919"><button type="button" class="zoom" data-full="img/sys-cam-1.webp" data-cap="아이온 M · 카메라 및 조작 규칙 문서" aria-label="아이온 M · 카메라 및 조작 규칙 문서 크게 보기"><img src="img/sys-cam-1.t.webp" alt="아이온 M · 카메라 및 조작 규칙 문서" width="760" height="546" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.8582"><button type="button" class="zoom" data-full="img/sys-cam-2.webp" data-cap="아이온 M · 카메라 및 조작 규칙 문서" aria-label="아이온 M · 카메라 및 조작 규칙 문서 크게 보기"><img src="img/sys-cam-2.t.webp" alt="아이온 M · 카메라 및 조작 규칙 문서" width="760" height="409" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.9596"><button type="button" class="zoom" data-full="img/sys-cam-3.webp" data-cap="아이온 M · 카메라 및 조작 규칙 문서" aria-label="아이온 M · 카메라 및 조작 규칙 문서 크게 보기"><img src="img/sys-cam-3.t.webp" alt="아이온 M · 카메라 및 조작 규칙 문서" width="641" height="668" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="system-04">
+  <div class="case-text">
+    <p class="case-no">System 04</p>
+    <h3>캐릭터 비행 시스템 UI/UX 규칙</h3>
+    <div class="chips"><span class="chip ghost">AION M</span></div>
+    <div class="prose"><p>아이온M의 비행 조작을 설계할 때, 캐릭터 이동뿐만 아니라 카메라의 거리와 각도를 동시에 조작해야 했기에 조작의 간소화가 필수적이었습니다.</p><p>이에 따라, 유저의 플레이 경험을 예측하여 불필요한 조작을 최소화했습니다. 빠르게 공중에서 이동하는 비행 시작 시 주변 상황을 더 넓게 인지할 수 있도록 카메라 거리를 자동으로 늘려주고, 캐릭터의 이동 방향에 따라 카메라 각도가 자동으로 조정되도록 설계했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">아이온M · 카메라 및 타겟 규칙</p><div class="just gal"><figure class="zf" style="--r:0.874"><button type="button" class="zoom" data-full="img/sys-fly-t1.webp" data-cap="아이온M · 카메라 및 타겟 규칙" aria-label="아이온M · 카메라 및 타겟 규칙 크게 보기"><img src="img/sys-fly-t1.t.webp" alt="아이온M · 카메라 및 타겟 규칙" width="645" height="738" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.76"><button type="button" class="zoom" data-full="img/sys-fly-t2.webp" data-cap="아이온M · 카메라 및 타겟 규칙" aria-label="아이온M · 카메라 및 타겟 규칙 크게 보기"><img src="img/sys-fly-t2.t.webp" alt="아이온M · 카메라 및 타겟 규칙" width="608" height="800" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.8939"><button type="button" class="zoom" data-full="img/sys-fly-t3.webp" data-cap="아이온M · 카메라 및 타겟 규칙" aria-label="아이온M · 카메라 및 타겟 규칙 크게 보기"><img src="img/sys-fly-t3.t.webp" alt="아이온M · 카메라 및 타겟 규칙" width="598" height="669" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">아이온M · 비행 조작 규칙</p><div class="just gal"><figure class="zf" style="--r:0.7979"><button type="button" class="zoom" data-full="img/sys-fly-c1.webp" data-cap="아이온M · 비행 조작 규칙" aria-label="아이온M · 비행 조작 규칙 크게 보기"><img src="img/sys-fly-c1.t.webp" alt="아이온M · 비행 조작 규칙" width="687" height="861" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.8194"><button type="button" class="zoom" data-full="img/sys-fly-c2.webp" data-cap="아이온M · 비행 조작 규칙" aria-label="아이온M · 비행 조작 규칙 크게 보기"><img src="img/sys-fly-c2.t.webp" alt="아이온M · 비행 조작 규칙" width="658" height="803" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">아이온M · 비행 모션 규칙</p><div class="just gal"><figure class="zf" style="--r:0.9923"><button type="button" class="zoom" data-full="img/sys-fly-m.webp" data-cap="아이온M · 비행 모션 규칙" aria-label="아이온M · 비행 모션 규칙 크게 보기"><img src="img/sys-fly-m.t.webp" alt="아이온M · 비행 모션 규칙" width="514" height="518" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">아이온M · 플레이 테스트 화면</p><div class="just gal"><figure class="zf" style="--r:1.6777"><button type="button" class="zoom" data-full="img/sys-fly-test.webp" data-cap="아이온M · 플레이 테스트 화면" aria-label="아이온M · 플레이 테스트 화면 크게 보기"><img src="img/sys-fly-test.t.webp" alt="아이온M · 플레이 테스트 화면" width="760" height="453" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="system-05">
+  <div class="case-text">
+    <p class="case-no">System 05</p>
+    <h3>선 판정 전투 로직 플로우</h3>
+    <div class="chips"><span class="chip ghost">AION REMAKE</span></div>
+    <div class="prose"><p>전투 시 플레이어의 피지컬보다는 캐릭터의 성장이 전투 결과에 잘 반영될 수 있도록 선 판정 전투의 기반 시스템을 설계했습니다.</p><p>스킬 사용 시 타겟의 상태를 체크하고, 코스트 차감 → 캐스팅 → 파이어 → 히트로 연결되는 세부 규칙을 설계했습니다. 이때, 각 흐름에 따라 플레이어가 조작을 통해 전투 결과에 개입할 수 있는 부분과 없는 부분을 정의하며, 서버에서 패킷을 언제 던지고 받을지에 대한 세부 사항에 대해서도 조율하며 업무를 진행했습니다.</p><p>또한, 버프/디버프, 데미지 연산, 물리 효과, 상태 이상 등을 모듈화하여, 기획 단계에서 전투 데이터 작업 시 Hit 판정에 다양한 스킬 효과를 붙일 수 있도록 설계하여 기획 데이터 작업에 대한 자유도를 조금 더 높여보았습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">아이온 리메이크 · 전투판정 문서</p><div class="just gal"><figure class="zf" style="--r:0.8034"><button type="button" class="zoom" data-full="img/sys-pre-1.webp" data-cap="아이온 리메이크 · 전투판정 문서" aria-label="아이온 리메이크 · 전투판정 문서 크게 보기"><img src="img/sys-pre-1.t.webp" alt="아이온 리메이크 · 전투판정 문서" width="760" height="946" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.027"><button type="button" class="zoom" data-full="img/sys-pre-2.webp" data-cap="아이온 리메이크 · 전투판정 문서" aria-label="아이온 리메이크 · 전투판정 문서 크게 보기"><img src="img/sys-pre-2.t.webp" alt="아이온 리메이크 · 전투판정 문서" width="760" height="740" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.5447"><button type="button" class="zoom" data-full="img/sys-pre-3.webp" data-cap="아이온 리메이크 · 전투판정 문서" aria-label="아이온 리메이크 · 전투판정 문서 크게 보기"><img src="img/sys-pre-3.t.webp" alt="아이온 리메이크 · 전투판정 문서" width="760" height="492" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.3428"><button type="button" class="zoom" data-full="img/sys-pre-4.webp" data-cap="아이온 리메이크 · 전투판정 문서" aria-label="아이온 리메이크 · 전투판정 문서 크게 보기"><img src="img/sys-pre-4.t.webp" alt="아이온 리메이크 · 전투판정 문서" width="760" height="566" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.362"><button type="button" class="zoom" data-full="img/sys-pre-5.webp" data-cap="아이온 리메이크 · 전투판정 문서" aria-label="아이온 리메이크 · 전투판정 문서 크게 보기"><img src="img/sys-pre-5.t.webp" alt="아이온 리메이크 · 전투판정 문서" width="760" height="558" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="system-06">
+  <div class="case-text">
+    <p class="case-no">System 06</p>
+    <h3>액션 장르의 후 판정 전투</h3>
+    <div class="chips"><span class="chip ghost">Project EX</span></div>
+    <div class="prose"><p>캐릭터 액션에 따라 전투 판정이 정교하게 결정되는 후판정 전투를 제작하기 위해, 타격 판정은 공격자의 무기 Mesh의 콜리전과 방어자의 캐릭터의 Hit Box 충돌 여부를 기반으로 하는 전투 시스템을 설계했습니다.</p><p>또한, 공격 판정을 무시할 수 있는 다양한 ‘아머’ 타입 효과와 이를 상쇄하는 ‘아머 브레이크’ 효과, 가드 및 저스트 가드 판정 규칙, 가드 브레이크 효과 등 수십 종의 전투 효과를 설계했습니다.</p><p>각종 전투 효과가 발동하는 타이밍을 기획팀에서 직접 캐릭터 동작을 확인하며 정교하게 프레임 단위로 조정할 수 있도록 Animation Notify 형태로 제작을 요청했습니다. 이후 전투에 대한 밸런스를 잡기 위해 공격 액션과 방어 액션에 세팅한 Animation Notify를 세밀하게 조정해가며 전투의 공방이 제대로 발생할 수 있도록 지속적으로 보완하는 업무를 진행했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">프로젝트EX · 전투 판정 기획서</p><div class="just gal"><figure class="zf" style="--r:0.6928"><button type="button" class="zoom" data-full="img/sys-post-1.webp" data-cap="프로젝트EX · 전투 판정 기획서" aria-label="프로젝트EX · 전투 판정 기획서 크게 보기"><img src="img/sys-post-1.t.webp" alt="프로젝트EX · 전투 판정 기획서" width="760" height="1097" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:0.695"><button type="button" class="zoom" data-full="img/sys-post-2.webp" data-cap="프로젝트EX · 전투 판정 기획서" aria-label="프로젝트EX · 전투 판정 기획서 크게 보기"><img src="img/sys-post-2.t.webp" alt="프로젝트EX · 전투 판정 기획서" width="752" height="1082" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">프로젝트EX · 노티파이 요청서</p><div class="just gal"><figure class="zf" style="--r:0.9548"><button type="button" class="zoom" data-full="img/sys-post-n.webp" data-cap="프로젝트EX · 노티파이 요청서" aria-label="프로젝트EX · 노티파이 요청서 크게 보기"><img src="img/sys-post-n.t.webp" alt="프로젝트EX · 노티파이 요청서" width="760" height="796" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">프로젝트EX · 전투 효과 세팅</p><div class="just gal"><figure class="zf" style="--r:1.2298"><button type="button" class="zoom" data-full="img/sys-post-fx.webp" data-cap="프로젝트EX · 전투 효과 세팅" aria-label="프로젝트EX · 전투 효과 세팅 크게 보기"><img src="img/sys-post-fx.t.webp" alt="프로젝트EX · 전투 효과 세팅" width="760" height="618" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="system-07">
+  <div class="case-text">
+    <p class="case-no">System 07</p>
+    <h3>전투 스탯 및 연산규칙</h3>
+    <div class="chips"><span class="chip ghost">AION M</span><span class="chip ghost">Project EX</span></div>
+    <div class="prose"><p>캐릭터 몸체에 대한 성장과 아이템 파츠에 대한 성장 방식을 고민 후 스탯을 어떻게 나눌 것인지에 대한 판단을 먼저 진행했습니다.</p><p>그리고 1차 스탯과 2~3차 스탯의 필요 여부를 결정한 후, 전투 판정 요소와 성장을 고려한 스탯 리스트를 산출하여 프로그램팀이 전투 구조를 설계할 수 있도록 제시했습니다.</p><p>스탯의 연산 규칙을 문서로 필수 관리하여, 시스템 변경 또는 확장 시 전투 스탯의 사전 시뮬레이션이 용이하도록 했습니다. 이를 통해 담당자 교체 시 코드 재분석에 소요되는 시간을 최소화하고 작업 효율성을 높였습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">아이온M · 스탯 및 전투 연산 문서</p><div class="just gal"><figure class="zf" style="--r:2.1902"><button type="button" class="zoom" data-full="img/sys-stat-am.webp" data-cap="아이온M · 스탯 및 전투 연산 문서" aria-label="아이온M · 스탯 및 전투 연산 문서 크게 보기"><img src="img/sys-stat-am.t.webp" alt="아이온M · 스탯 및 전투 연산 문서" width="760" height="347" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">프로젝트EX · 스탯 및 전투 연산 문서</p><div class="just gal"><figure class="zf" style="--r:1.7002"><button type="button" class="zoom" data-full="img/sys-stat-ex1.webp" data-cap="프로젝트EX · 스탯 및 전투 연산 문서" aria-label="프로젝트EX · 스탯 및 전투 연산 문서 크게 보기"><img src="img/sys-stat-ex1.t.webp" alt="프로젝트EX · 스탯 및 전투 연산 문서" width="760" height="447" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.7156"><button type="button" class="zoom" data-full="img/sys-stat-ex2.webp" data-cap="프로젝트EX · 스탯 및 전투 연산 문서" aria-label="프로젝트EX · 스탯 및 전투 연산 문서 크게 보기"><img src="img/sys-stat-ex2.t.webp" alt="프로젝트EX · 스탯 및 전투 연산 문서" width="760" height="443" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:2.0159"><button type="button" class="zoom" data-full="img/sys-stat-ex3.webp" data-cap="프로젝트EX · 스탯 및 전투 연산 문서" aria-label="프로젝트EX · 스탯 및 전투 연산 문서 크게 보기"><img src="img/sys-stat-ex3.t.webp" alt="프로젝트EX · 스탯 및 전투 연산 문서" width="760" height="377" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="system-08">
+  <div class="case-text">
+    <p class="case-no">System 08</p>
+    <h3>몬스터 전투 설계 및 Behavior Tree 활용</h3>
+    <div class="chips"><span class="chip ghost">Project EX</span></div>
+    <div class="prose"><p>몬스터의 상태를 순찰, 탐지, 추적, 전투, 도주 상태 등으로 분류하여, 각각의 상태가 전환되는 규칙을 설계했습니다.</p><p>언리얼 엔진에서 제공하는 Behavior Tree 기능을 활용해 몬스터 AI를 직접 세팅해보았으며, 기본 기능에 없는 추가적인 기능들에 대해서는 프로그램팀에 직접 개발 요청을 통하여 몬스터 AI를 제작했습니다.</p><p>플레이어가 몬스터에게 발각되었을 때의 긴장감을 좀 더 추가하고 싶다는 생각에 호라이즌 시리즈나 어쌔신 크리드 등 다양한 콘솔게임에서 경험해 보았던 경계 단계를 거치고 유저를 발각하는 탐지 방식을 적용해 보았습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">프로젝트EX · 몬스터 전투 상태별 전환 규칙</p><div class="just gal"><figure class="zf" style="--r:1.3718"><button type="button" class="zoom" data-full="img/sys-mon-1.webp" data-cap="프로젝트EX · 몬스터 전투 상태별 전환 규칙" aria-label="프로젝트EX · 몬스터 전투 상태별 전환 규칙 크게 보기"><img src="img/sys-mon-1.t.webp" alt="프로젝트EX · 몬스터 전투 상태별 전환 규칙" width="760" height="554" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.7882"><button type="button" class="zoom" data-full="img/sys-mon-2.webp" data-cap="프로젝트EX · 몬스터 전투 상태별 전환 규칙" aria-label="프로젝트EX · 몬스터 전투 상태별 전환 규칙 크게 보기"><img src="img/sys-mon-2.t.webp" alt="프로젝트EX · 몬스터 전투 상태별 전환 규칙" width="760" height="425" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.3217"><button type="button" class="zoom" data-full="img/sys-mon-3.webp" data-cap="프로젝트EX · 몬스터 전투 상태별 전환 규칙" aria-label="프로젝트EX · 몬스터 전투 상태별 전환 규칙 크게 보기"><img src="img/sys-mon-3.t.webp" alt="프로젝트EX · 몬스터 전투 상태별 전환 규칙" width="760" height="575" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">프로젝트EX · 몬스터 Behavior Tree 세팅</p><div class="just gal"><figure class="zf" style="--r:1.5933"><button type="button" class="zoom" data-full="img/sys-bt-1.webp" data-cap="프로젝트EX · 몬스터 Behavior Tree 세팅" aria-label="프로젝트EX · 몬스터 Behavior Tree 세팅 크게 보기"><img src="img/sys-bt-1.t.webp" alt="프로젝트EX · 몬스터 Behavior Tree 세팅" width="760" height="477" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:2.8897"><button type="button" class="zoom" data-full="img/sys-bt-2.webp" data-cap="프로젝트EX · 몬스터 Behavior Tree 세팅" aria-label="프로젝트EX · 몬스터 Behavior Tree 세팅 크게 보기"><img src="img/sys-bt-2.t.webp" alt="프로젝트EX · 몬스터 Behavior Tree 세팅" width="760" height="263" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+  </div>
+</section>
+
+<section class="sec alt" id="content" aria-labelledby="h-ct">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="kicker">04 — Content Design</p><h2 id="h-ct">콘텐츠 기획</h2>
+      <p class="sec-sub">코어루프, 거점 점령, 해금 구조, 경제 밸런스, 그리고 AI로 직접 만든 기획 툴.</p></div>
+    
+<article class="case reveal" id="content-01">
+  <div class="case-text">
+    <p class="case-no">Content 01</p>
+    <h3>캐릭터 성장에 초점을 맞춘 콘텐츠 코어루프</h3>
+    <div class="chips"><span class="chip ghost">AION M</span></div>
+    <div class="prose"><p>RPG 장르의 주 플레이 목적인 캐릭터 성장에 필요한 보상을 중심으로 콘텐츠 코어루프를 설계했습니다. 캐릭터의 성장 요소를 리스트업하고, 각각의 성장을 채워줄 수 있는 콘텐츠들을 분류했습니다.</p><p>캐릭터 성장과 관련된 활동이 특정 콘텐츠에 집중되거나 일부 콘텐츠가 성장에 영향을 미치지 못할 경우 코어루프가 깨지는 악순환이 발생할 수 있다고 판단했습니다. 그래서 각각의 성장 요소의 단계별 허들을 넘기기 위해서는 다른 콘텐츠들의 플레이가 연계될 수 있도록 설계하여 플레이어들이 모든 콘텐츠를 골고루 경험할 수 있도록 설계하는 데 초점을 맞췄습니다.</p><p>또한, 모든 성장 요소와 플레이 콘텐츠가 동시 다발적으로 열릴 경우 학습의 난이도가 올라갈 수 있으므로, 콘텐츠의 개방 시점과 동선에 대한 밸런스도 함께 고민했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">AION M · 콘텐츠 코어루프 설계 문서</p><div class="just gal"><figure class="zf" style="--r:1.2418"><button type="button" class="zoom" data-full="img/ct-core-1.webp" data-cap="AION M · 콘텐츠 코어루프 설계 문서" aria-label="AION M · 콘텐츠 코어루프 설계 문서 크게 보기"><img src="img/ct-core-1.t.webp" alt="AION M · 콘텐츠 코어루프 설계 문서" width="760" height="612" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.195"><button type="button" class="zoom" data-full="img/ct-core-2.webp" data-cap="AION M · 콘텐츠 코어루프 설계 문서" aria-label="AION M · 콘텐츠 코어루프 설계 문서 크게 보기"><img src="img/ct-core-2.t.webp" alt="AION M · 콘텐츠 코어루프 설계 문서" width="760" height="636" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.2667"><button type="button" class="zoom" data-full="img/ct-core-3.webp" data-cap="AION M · 콘텐츠 코어루프 설계 문서" aria-label="AION M · 콘텐츠 코어루프 설계 문서 크게 보기"><img src="img/ct-core-3.t.webp" alt="AION M · 콘텐츠 코어루프 설계 문서" width="760" height="600" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="content-02">
+  <div class="case-text">
+    <p class="case-no">Content 02</p>
+    <h3>길드 단위 거점 점령 콘텐츠 설계</h3>
+    <div class="chips"><span class="chip ghost">AION REMAKE</span></div>
+    <div class="prose"><p>경쟁형 MMORPG에서 가장 재미있는 공성전 콘텐츠를 특정 길드만 플레이하고, 독식이 가능하여 많은 플레이어들이 경험하지 못하고 재미를 잃는다는 단점이 있다고 생각되었습니다. 그래서 아이온 리메이크의 콘텐츠를 설계 시 모든 길드가 작은 공성전을 미리 경험해 볼 수 있고, 모든 성을 독식할 수 없도록 SLG 문법의 땅따먹기 개념을 접목한 거점 점령 콘텐츠를 기획했습니다.</p><p>그리고 오래된 서버일수록 특정 지역을 점령한 세력이 고착화되어 전쟁이 반복되지 않는 문제를 방지하기 위하여, 시즌마다 특정 거점에서 생산할 수 있는 특산물이 바뀌도록 설계했습니다. 이러한 특산물의 기획 의도는 거점의 가치가 지속적으로 변화하도록 하여 시즌이 변경될 때마다 점령전이 다시 활발하게 일어날 수 있기를 기대하였습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">아이온 리메이크 · 거점점령 콘텐츠 문서</p><div class="just gal"><figure class="zf" style="--r:1.2625"><button type="button" class="zoom" data-full="img/ct-siege-1.webp" data-cap="아이온 리메이크 · 거점점령 콘텐츠 문서" aria-label="아이온 리메이크 · 거점점령 콘텐츠 문서 크게 보기"><img src="img/ct-siege-1.t.webp" alt="아이온 리메이크 · 거점점령 콘텐츠 문서" width="760" height="602" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.0873"><button type="button" class="zoom" data-full="img/ct-siege-2.webp" data-cap="아이온 리메이크 · 거점점령 콘텐츠 문서" aria-label="아이온 리메이크 · 거점점령 콘텐츠 문서 크게 보기"><img src="img/ct-siege-2.t.webp" alt="아이온 리메이크 · 거점점령 콘텐츠 문서" width="760" height="699" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.1259"><button type="button" class="zoom" data-full="img/ct-siege-3.webp" data-cap="아이온 리메이크 · 거점점령 콘텐츠 문서" aria-label="아이온 리메이크 · 거점점령 콘텐츠 문서 크게 보기"><img src="img/ct-siege-3.t.webp" alt="아이온 리메이크 · 거점점령 콘텐츠 문서" width="760" height="675" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="content-03">
+  <div class="case-text">
+    <p class="case-no">Content 03</p>
+    <h3>AI로 제작한 툴을 활용하여 크래프팅 콘텐츠 밸런스와 오류 검증</h3>
+    <div class="chips"><span class="chip hot">AI Tooling</span><span class="chip ghost">Project DX</span><span class="chip ghost">Claude Code</span></div>
+    <div class="prose"><p>Claude Code를 활용해 크래프팅 제작식을 보기 쉽게 트리 구조로 조회하고, 데이터를 입력하는 자체 툴을 직접 제작해 보았습니다. 회사 보안 정책에 위배되지 않도록 해당 툴은 HTML로 제작하여, Durango World 조직에서 관리하는 Confluence에 페이지를 개설하였습니다.</p><p>해당 페이지에서는 크래프팅에 필요한 제작식, 채집물, 재료, 채집 위치 등을 엑셀 또는 툴에 직접 입력하여 팀원분들에게 실시간 공유하고 교차 검토를 진행했습니다.</p><p>입력한 데이터들을 기준으로 결과물의 최종 가치를 자동으로 계산하고, 다른 결과물들과 비교가 가능하도록 했습니다.</p><p>최종적으로는 제작에 필요한 데이터 연결에 오류가 없는지 자동으로 검증해주는 기능을 추가하여, 데이터 작업에 대한 휴먼 에러를 최소화했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">Claude를 활용하여 HTML 기반의 자체 툴 제작</p><div class="just gal"><figure class="zf" style="--r:1.9638"><button type="button" class="zoom" data-full="img/ct-tool-1.webp" data-cap="Claude를 활용하여 HTML 기반의 자체 툴 제작" aria-label="Claude를 활용하여 HTML 기반의 자체 툴 제작 크게 보기"><img src="img/ct-tool-1.t.webp" alt="Claude를 활용하여 HTML 기반의 자체 툴 제작" width="760" height="387" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.9437"><button type="button" class="zoom" data-full="img/ct-tool-2.webp" data-cap="Claude를 활용하여 HTML 기반의 자체 툴 제작" aria-label="Claude를 활용하여 HTML 기반의 자체 툴 제작 크게 보기"><img src="img/ct-tool-2.t.webp" alt="Claude를 활용하여 HTML 기반의 자체 툴 제작" width="760" height="391" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.9588"><button type="button" class="zoom" data-full="img/ct-tool-3.webp" data-cap="Claude를 활용하여 HTML 기반의 자체 툴 제작" aria-label="Claude를 활용하여 HTML 기반의 자체 툴 제작 크게 보기"><img src="img/ct-tool-3.t.webp" alt="Claude를 활용하여 HTML 기반의 자체 툴 제작" width="760" height="388" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="content-04">
+  <div class="case-text">
+    <p class="case-no">Content 04</p>
+    <h3>재화 및 아이템 배포 밸런스</h3>
+    <div class="chips"><span class="chip ghost">GRAND CROSS: AGE OF TITANS</span></div>
+    <div class="prose"><p>유저 통계 Raw Data를 붙여 넣으면 제가 확인하고자 하는 유저 통계 데이터가 완성되는 엑셀을 제작하고, 이 데이터를 분석하여 각종 재화 및 아이템의 배포와 소모가 기댓값에 맞게 이루어지는지 확인 작업을 주기적으로 진행하였습니다.</p><p>필요한 경우에는 재밸런싱을 통해 라이브 서비스를 안정적으로 유지할 수 있었습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">에이지오브타이탄 · 재화 밸런스</p><div class="just gal"><figure class="zf" style="--r:2.585"><button type="button" class="zoom" data-full="img/ct-cur-1.webp" data-cap="에이지오브타이탄 · 재화 밸런스" aria-label="에이지오브타이탄 · 재화 밸런스 크게 보기"><img src="img/ct-cur-1.t.webp" alt="에이지오브타이탄 · 재화 밸런스" width="760" height="294" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.8905"><button type="button" class="zoom" data-full="img/ct-cur-2.webp" data-cap="에이지오브타이탄 · 재화 밸런스" aria-label="에이지오브타이탄 · 재화 밸런스 크게 보기"><img src="img/ct-cur-2.t.webp" alt="에이지오브타이탄 · 재화 밸런스" width="760" height="402" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">에이지오브타이탄 · 영웅 조각 밸런스</p><div class="just gal"><figure class="zf" style="--r:1.52"><button type="button" class="zoom" data-full="img/ct-hero-1.webp" data-cap="에이지오브타이탄 · 영웅 조각 밸런스" aria-label="에이지오브타이탄 · 영웅 조각 밸런스 크게 보기"><img src="img/ct-hero-1.t.webp" alt="에이지오브타이탄 · 영웅 조각 밸런스" width="760" height="500" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:2.1348"><button type="button" class="zoom" data-full="img/ct-hero-2.webp" data-cap="에이지오브타이탄 · 영웅 조각 밸런스" aria-label="에이지오브타이탄 · 영웅 조각 밸런스 크게 보기"><img src="img/ct-hero-2.t.webp" alt="에이지오브타이탄 · 영웅 조각 밸런스" width="760" height="356" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="content-05">
+  <div class="case-text">
+    <p class="case-no">Content 05</p>
+    <h3>재료 Driven 콘텐츠 해금 구조 설계</h3>
+    <div class="chips"><span class="chip ghost">Project DX</span></div>
+    <div class="prose"><p>Durango World에서 콘텐츠 해금에 대한 업무를 진행 시 생존 장르 특성에 맞게 시스템적 튜토리얼은 최소화하고, 플레이 학습이 자연스럽게 발생할 수 있도록 채집, 사냥, 가공 등으로 획득한 재료를 최초 획득하는 시점에 각종 콘텐츠가 해금되도록 설계를 진행했습니다.</p><p>단, 이러한 해금 방식은 일부 성장 구간을 건너뛰게 되었을 때 게임의 플레이가 막히고 해결 방법을 찾을 수 없는 일이 발생할 수 있습니다. 그래서 이러한 리스크를 최소화하기 위해 해금에 필요한 재료들이 철저하게 트리 구조에 의해 획득이 가능하도록 설계를 진행했습니다.</p><p>그리고 여기서 성장에 필요한 핵심 재료는 반복 파밍과 같은 확률형 콘텐츠가 아닌 특정 콘텐츠의 확정 보상으로 제공하고, 다양한 콘텐츠를 필수로 한번씩 모두 경험할 수 있도록 동선을 설계했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">프로젝트DX · 레시피 해금 문서</p><div class="just gal"><figure class="zf" style="--r:1.5385"><button type="button" class="zoom" data-full="img/ct-recipe-1.webp" data-cap="프로젝트DX · 레시피 해금 문서" aria-label="프로젝트DX · 레시피 해금 문서 크게 보기"><img src="img/ct-recipe-1.t.webp" alt="프로젝트DX · 레시피 해금 문서" width="760" height="494" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.6964"><button type="button" class="zoom" data-full="img/ct-recipe-2.webp" data-cap="프로젝트DX · 레시피 해금 문서" aria-label="프로젝트DX · 레시피 해금 문서 크게 보기"><img src="img/ct-recipe-2.t.webp" alt="프로젝트DX · 레시피 해금 문서" width="760" height="448" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:2.0596"><button type="button" class="zoom" data-full="img/ct-recipe-3.webp" data-cap="프로젝트DX · 레시피 해금 문서" aria-label="프로젝트DX · 레시피 해금 문서 크게 보기"><img src="img/ct-recipe-3.t.webp" alt="프로젝트DX · 레시피 해금 문서" width="760" height="369" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="content-06">
+  <div class="case-text">
+    <p class="case-no">Content 06</p>
+    <h3>기획 의도를 명확히 반영한 아트 리소스 발주</h3>
+    <div class="chips"><span class="chip ghost">Project DX</span></div>
+    <div class="prose"><p>아트 리소스 발주 시 리소스의 목적과 컨셉을 뾰족하게 설명하지 못한다면, 의미 없는 예쁘고 멋진 포트폴리오용 리소스가 제작될 수 있습니다.</p><p>그래서 이 리소스를 게임에서 얻기 위해 플레이어가 어떤 과정을 거치고, 어떤 재질의 재료를 모아야 하는지 명확하게 전달하여 기획 의도에 맞는 리소스가 제작될 수 있었습니다.</p><p>또한 리소스의 유형을 정리한 후 규격에 대한 가이드를 함께 제공하여, 이후 시스템 구현 시 타입으로 정의된 깔끔한 규칙을 적용할 수 있었습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">프로젝트 DX · 가구 리소스 발주서</p><div class="just gal"><figure class="zf" style="--r:0.8796"><button type="button" class="zoom" data-full="img/ct-furn-1.webp" data-cap="프로젝트 DX · 가구 리소스 발주서" aria-label="프로젝트 DX · 가구 리소스 발주서 크게 보기"><img src="img/ct-furn-1.t.webp" alt="프로젝트 DX · 가구 리소스 발주서" width="760" height="864" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.5323"><button type="button" class="zoom" data-full="img/ct-furn-2.webp" data-cap="프로젝트 DX · 가구 리소스 발주서" aria-label="프로젝트 DX · 가구 리소스 발주서 크게 보기"><img src="img/ct-furn-2.t.webp" alt="프로젝트 DX · 가구 리소스 발주서" width="760" height="496" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.0935"><button type="button" class="zoom" data-full="img/ct-furn-3.webp" data-cap="프로젝트 DX · 가구 리소스 발주서" aria-label="프로젝트 DX · 가구 리소스 발주서 크게 보기"><img src="img/ct-furn-3.t.webp" alt="프로젝트 DX · 가구 리소스 발주서" width="760" height="695" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+  </div>
+</section>
+
+<section class="sec" id="directing" aria-labelledby="h-dr">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="kicker">05 — Directing</p><h2 id="h-dr">디렉팅 &amp; 프로젝트 리딩</h2>
+      <p class="sec-sub">신규 프로젝트 제안과 CEO 보고, 방향성 정립, 마일스톤 운영 경험.</p></div>
+    
+<article class="case reveal" id="directing-01">
+  <div class="case-text">
+    <p class="case-no">Directing 01</p>
+    <h3>스타크래프트IP 신규 게임 공모전</h3>
+    <div class="chips"><span class="chip ghost">Netmarble F&amp;C</span></div>
+    <div class="prose"><p>넷마블에프앤씨에 재직 시 넷마블 본사에서 진행하는 스타크래프트IP 공모전에 지원 후 총 3개 팀이 진출하는 본선에 선발되어, 넷마블 본사 경영진과 계열사별 대표님들에게 프레젠테이션을 진행했습니다.</p><p>약 1~2주 내에 IP 활용 방식과 게임 내용에 대한 아이디어를 구체화 한 이후 프레젠테이션 준비를 진행하였습니다. 그리고 프로토타입 TF를 구성 후 약 3개월 동안 기본적인 전투와 게임의 컨셉을 확인할 수 있는 플레이 빌드를 준비하여 공모전에 함께 제출했습니다.</p><p>스타크래프트의 영웅 유닛을 선택 후 전장에서 탈출하는 익스트랙션 방식의 배틀로얄 장르를 제안하였으나, 본선 공모전에서 아쉽게도 최종 선정되지는 못했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">넷마블 스타크래프트IP 공모전 발표 문서 중 일부</p><div class="just gal"><figure class="zf" style="--r:1.8719"><button type="button" class="zoom" data-full="img/dr-sc-1.webp" data-cap="넷마블 스타크래프트IP 공모전 발표 문서 중 일부" aria-label="넷마블 스타크래프트IP 공모전 발표 문서 중 일부 크게 보기"><img src="img/dr-sc-1.t.webp" alt="넷마블 스타크래프트IP 공모전 발표 문서 중 일부" width="760" height="406" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.7757"><button type="button" class="zoom" data-full="img/dr-sc-2.webp" data-cap="넷마블 스타크래프트IP 공모전 발표 문서 중 일부" aria-label="넷마블 스타크래프트IP 공모전 발표 문서 중 일부 크게 보기"><img src="img/dr-sc-2.t.webp" alt="넷마블 스타크래프트IP 공모전 발표 문서 중 일부" width="760" height="428" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="directing-02">
+  <div class="case-text">
+    <p class="case-no">Directing 02</p>
+    <h3>아이온 리메이크 신규 프로젝트 제안</h3>
+    <div class="chips"><span class="chip ghost">AION REMAKE</span><span class="chip ghost">NC</span></div>
+    <div class="prose"><p>IP&amp;세계관, 타겟층, 플랫폼, 핵심 콘텐츠, 전투, 개발일정 및 인력계획에 대한 목표가 담긴 신규 프로젝트 제안서를 작성했습니다.</p><p>신규 프로젝트에 대한 타당성 검토 및 CEO 승인을 이끌어 내기 위한 프레젠테이션 준비를 진행했습니다.</p><h4>마일스톤별 빌드 체크 및 결과보고</h4><p>마일스톤 별 목표일감에 대한 달성률 체크 및 빌드에 대한 완성도를 수시로 체크하며, 팀별 보완사항에 대한 의견을 전달했습니다.</p><p>마일스톤이 종료되기 약 1~2개월 전부터는 구현된 빌드를 최종 점검하여 목표치를 달성하였을 경우 직속 임원 및 CEO님께 보고를 드리기 위한 프레젠테이션 준비를 진행했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">21년 1월 · 최초 CEO 발표자료 표지 &amp; 개요</p><div class="just gal"><figure class="zf" style="--r:1.7761"><button type="button" class="zoom" data-full="img/dr-ceo-1a.webp" data-cap="21년 1월 · 최초 CEO 발표자료 표지 &amp; 개요" aria-label="21년 1월 · 최초 CEO 발표자료 표지 &amp; 개요 크게 보기"><img src="img/dr-ceo-1a.t.webp" alt="21년 1월 · 최초 CEO 발표자료 표지 &amp; 개요" width="714" height="402" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.7761"><button type="button" class="zoom" data-full="img/dr-ceo-1b.webp" data-cap="21년 1월 · 최초 CEO 발표자료 표지 &amp; 개요" aria-label="21년 1월 · 최초 CEO 발표자료 표지 &amp; 개요 크게 보기"><img src="img/dr-ceo-1b.t.webp" alt="21년 1월 · 최초 CEO 발표자료 표지 &amp; 개요" width="714" height="402" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">21년 5월 · M0 빌드 CEO 발표자료 표지 &amp; 개요</p><div class="just gal"><figure class="zf" style="--r:1.7811"><button type="button" class="zoom" data-full="img/dr-ceo-2a.webp" data-cap="21년 5월 · M0 빌드 CEO 발표자료 표지 &amp; 개요" aria-label="21년 5월 · M0 빌드 CEO 발표자료 표지 &amp; 개요 크게 보기"><img src="img/dr-ceo-2a.t.webp" alt="21년 5월 · M0 빌드 CEO 발표자료 표지 &amp; 개요" width="716" height="402" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.791"><button type="button" class="zoom" data-full="img/dr-ceo-2b.webp" data-cap="21년 5월 · M0 빌드 CEO 발표자료 표지 &amp; 개요" aria-label="21년 5월 · M0 빌드 CEO 발표자료 표지 &amp; 개요 크게 보기"><img src="img/dr-ceo-2b.t.webp" alt="21년 5월 · M0 빌드 CEO 발표자료 표지 &amp; 개요" width="720" height="402" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">22년 · M1 빌드 CEO 발표자료 표지 &amp; 개요</p><div class="just gal"><figure class="zf" style="--r:1.7935"><button type="button" class="zoom" data-full="img/dr-ceo-3a.webp" data-cap="22년 · M1 빌드 CEO 발표자료 표지 &amp; 개요" aria-label="22년 · M1 빌드 CEO 발표자료 표지 &amp; 개요 크게 보기"><img src="img/dr-ceo-3a.t.webp" alt="22년 · M1 빌드 CEO 발표자료 표지 &amp; 개요" width="721" height="402" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.7886"><button type="button" class="zoom" data-full="img/dr-ceo-3b.webp" data-cap="22년 · M1 빌드 CEO 발표자료 표지 &amp; 개요" aria-label="22년 · M1 빌드 CEO 발표자료 표지 &amp; 개요 크게 보기"><img src="img/dr-ceo-3b.t.webp" alt="22년 · M1 빌드 CEO 발표자료 표지 &amp; 개요" width="719" height="402" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="directing-03">
+  <div class="case-text">
+    <p class="case-no">Directing 03</p>
+    <h3>전투 방향성 문서</h3>
+    <div class="chips"><span class="chip ghost">AION M</span><span class="chip ghost">AION REMAKE</span></div>
+    <div class="prose"><p>신규 프로젝트 초기에는 플레이가 가능한 빌드가 없기 때문에 실무자별로 서로 다른 게임을 상상하며 논의하는 상황이 자주 발생했습니다.</p><p>그래서 개발 초기에 전투 방향성을 명확히 결정하고, 이를 문서로 잘 정리하여, 개발팀 전원이 최대한 동일한 전투의 그림을 상상하며 세부적인 전투 및 콘텐츠 디자인을 진행할 수 있도록 가이드 문서를 제공했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">아이온M · 전투 방향성 문서</p><div class="just gal"><figure class="zf" style="--r:2.1839"><button type="button" class="zoom" data-full="img/dr-dir-am.webp" data-cap="아이온M · 전투 방향성 문서" aria-label="아이온M · 전투 방향성 문서 크게 보기"><img src="img/dr-dir-am.t.webp" alt="아이온M · 전투 방향성 문서" width="760" height="348" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">아이온 리메이크 · 전투 방향성 문서</p><div class="just gal"><figure class="zf" style="--r:1.8138"><button type="button" class="zoom" data-full="img/dr-dir-rm1.webp" data-cap="아이온 리메이크 · 전투 방향성 문서" aria-label="아이온 리메이크 · 전투 방향성 문서 크게 보기"><img src="img/dr-dir-rm1.t.webp" alt="아이온 리메이크 · 전투 방향성 문서" width="760" height="419" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.8095"><button type="button" class="zoom" data-full="img/dr-dir-rm2.webp" data-cap="아이온 리메이크 · 전투 방향성 문서" aria-label="아이온 리메이크 · 전투 방향성 문서 크게 보기"><img src="img/dr-dir-rm2.t.webp" alt="아이온 리메이크 · 전투 방향성 문서" width="760" height="420" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<article class="case reveal" id="directing-04">
+  <div class="case-text">
+    <p class="case-no">Directing 04</p>
+    <h3>마일스톤별 개발 계획 &amp; 팀별 업무분배 및 일정관리</h3>
+    <div class="chips"><span class="chip ghost">Jira</span><span class="chip ghost">AIR</span></div>
+    <div class="prose"><p>3~6개월로 구분된 마일스톤 별 개발목표를 수립하고, 목표를 달성하기 위한 팀별 업무계획을 각 팀의 리드님들과 조율을 진행했습니다. 이 중 사전에 기획이 완료되어야 진행될 수 있는 업무들은 별도 관리하여 기획팀 업무 분배와 목표일정을 전달했습니다.</p><h4>JIRA 및 AIR를 통한 팀별 업무전달 및 관리</h4><p>개발에 필요한 일감들의 우선순위와 진행절차를 고려하여 상위와 하위 일감리스트를 직접 등록하였습니다.</p><p>이후 등록된 일감들을 바탕으로 PM팀에서는 각각의 진행자와 실무자들에게 일감을 전달하고 일정 관리를 서포트할 수 있도록 요청했습니다.</p></div>
+  </div>
+  <div class="case-docs"><div class="dg"><p class="doc-cap">총 마일스톤별 개발실 계획 문서</p><div class="just gal"><figure class="zf" style="--r:2.31"><button type="button" class="zoom" data-full="img/dr-plan-1.webp" data-cap="총 마일스톤별 개발실 계획 문서" aria-label="총 마일스톤별 개발실 계획 문서 크게 보기"><img src="img/dr-plan-1.t.webp" alt="총 마일스톤별 개발실 계획 문서" width="760" height="329" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.7117"><button type="button" class="zoom" data-full="img/dr-plan-2.webp" data-cap="총 마일스톤별 개발실 계획 문서" aria-label="총 마일스톤별 개발실 계획 문서 크게 보기"><img src="img/dr-plan-2.t.webp" alt="총 마일스톤별 개발실 계획 문서" width="760" height="444" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div><div class="dg"><p class="doc-cap">실제 프로젝트 시 사용한 AIR(Jira)</p><div class="just gal"><figure class="zf" style="--r:2.0213"><button type="button" class="zoom" data-full="img/dr-jira.webp" data-cap="실제 프로젝트 시 사용한 AIR(Jira)" aria-label="실제 프로젝트 시 사용한 AIR(Jira) 크게 보기"><img src="img/dr-jira.t.webp" alt="실제 프로젝트 시 사용한 AIR(Jira)" width="760" height="376" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+  </div>
+</section>
+
+<section class="sec alt lab" id="ai" aria-labelledby="h-ai">
+  <div class="wrap">
+    <div class="sec-head reveal"><p class="kicker">06 — AI Lab</p><h2 id="h-ai">AI로 직접 만들고, 검증합니다</h2>
+      <p class="sec-sub">요즘 AI(Claude Code 등)를 활용해 게임과 기획 툴을 꾸준히 직접 만들어 보고 있습니다.
+      아이디어를 빠르게 플레이 가능한 빌드로 만들고, 직접 플레이하고 수치로 검증하는 것이 목표입니다.</p></div>
+    
+<div class="lab-sub reveal"><p class="kicker">Side Projects</p><h3>직접 만들고 플레이하며 검증하는 게임</h3></div>
+<div class="lab-grid">
+<article class="lab-card reveal">
+  <div class="lab-media gal" style="--bg:url(img/ai-dungeon.t.webp)"><button type="button" class="zoom" data-full="img/ai-dungeon.webp" data-cap="던전 탈출 (Dungeon Escape)" aria-label="던전 탈출 (Dungeon Escape) 크게 보기"><img src="img/ai-dungeon.t.webp" alt="던전 탈출 (Dungeon Escape)" width="900" height="505" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></div>
+  <div class="lab-body">
+    <p class="lab-no">Game 01 · Dungeon Escape</p>
+    <h4>던전 탈출</h4>
+    <div class="chips"><span class="chip hot">3D 전환 중</span><span class="chip ghost">던전 익스트랙션</span><span class="chip ghost">멀티플레이 · 최대 10인</span><span class="chip ghost">PvPvE</span></div>
+    <p class="lab-desc">주어진 시간 동안 전투와 파밍으로 캐릭터를 성장시키고, 일정 시간이 지나 PvP가 활성화되면 다른 플레이어를 처치하며 먼저 탈출하는 던전 익스트랙션 게임입니다.</p>
+    <ul class="ticks"><li>최대 10명이 함께 참여하는 멀티플레이 구조</li><li>안전 구간(PvP 불가) → PvP 활성화로 이어지는 시간 기반 긴장감 설계</li><li>매일 아들과 함께 플레이 테스트하며 밸런스를 조정</li><li>현재 3D 버전으로 전환 작업 진행 중</li></ul>
+  </div>
+</article>
+<article class="lab-card reveal">
+  <div class="lab-media gal" style="--bg:url(img/ai-taskbar.t.webp)"><button type="button" class="zoom" data-full="img/ai-taskbar.webp" data-cap="태스크바 워리어 (Taskbar Warrior)" aria-label="태스크바 워리어 (Taskbar Warrior) 크게 보기"><img src="img/ai-taskbar.t.webp" alt="태스크바 워리어 (Taskbar Warrior)" width="659" height="595" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></div>
+  <div class="lab-body">
+    <p class="lab-no">Game 02 · Taskbar Warrior</p>
+    <h4>태스크바 워리어</h4>
+    <div class="chips"><span class="chip ghost">방치형 RPG</span><span class="chip ghost">PC</span></div>
+    <p class="lab-desc">Steam에서 인기 있던 ‘Task Bar Hero’를 보고 착안한 게임으로, 같은 장르에서 밸런스를 다르게 설계하면 플레이 경험이 어떻게 달라지는지 직접 테스트해 보고 있습니다.</p>
+    <ul class="ticks"><li>기사 · 궁수 · 마법사 3인 파티와 파티 공용 가방 기반의 장비 성장 루프</li><li>장비 강화, 등급별 일괄 판매 등 방치형 장르의 편의 기능 구성</li><li>게임 제작은 Claude, 아트 리소스는 Nano Banana로 제작</li></ul><p class="lab-tools"><span>Made with</span><b>Claude</b><b>Nano Banana</b></p>
+  </div>
+</article>
+<article class="lab-card reveal">
+  <div class="lab-media gal" style="--bg:url(img/ai-parry.t.webp)"><button type="button" class="zoom" data-full="img/ai-parry.webp" data-cap="패링 남편 (Parry Husband)" aria-label="패링 남편 (Parry Husband) 크게 보기"><img src="img/ai-parry.t.webp" alt="패링 남편 (Parry Husband)" width="900" height="415" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></div>
+  <div class="lab-body">
+    <p class="lab-no">Game 03 · Parry Husband</p>
+    <h4>패링 남편</h4>
+    <div class="chips"><span class="chip ghost">러너</span><span class="chip ghost">리듬</span></div>
+    <p class="lab-desc">퇴근해 집에 돌아온 직장인 캐릭터가 집안 살림은 점프로 피하고, 아내의 잔소리는 방패로 패링해 튕겨내는 러너 게임입니다.</p>
+    <ul class="ticks"><li>박자(BPM)에 맞춰 점프와 패링을 입력하는 리듬 게임 요소 접목</li><li>MISS · COMBO BREAK 등 판정 피드백과 스테이지 목표(칼퇴근) 구성</li><li>용돈 수집 시 멜로디 보너스 등 리듬과 연결된 보상 설계</li></ul>
+  </div>
+</article>
+<article class="lab-card reveal">
+  <div class="lab-media gal" style="--bg:url(img/ai-idle4x.t.webp)"><button type="button" class="zoom" data-full="img/ai-idle4x.webp" data-cap="방치형 영토 전쟁 (Idle RPG × 4X)" aria-label="방치형 영토 전쟁 (Idle RPG × 4X) 크게 보기"><img src="img/ai-idle4x.t.webp" alt="방치형 영토 전쟁 (Idle RPG × 4X)" width="415" height="900" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></div>
+  <div class="lab-body">
+    <p class="lab-no">Game 04 · Idle RPG × 4X</p>
+    <h4>방치형 영토 전쟁</h4>
+    <div class="chips"><span class="chip ghost">방치형 RPG</span><span class="chip ghost">4X 전략</span><span class="chip ghost">모바일</span></div>
+    <p class="lab-desc">귀찮은 성장은 반복 사냥으로 알아서 돌아가고, 다른 플레이어들과의 땅따먹기만 직접 진행하는 방식의 게임입니다.</p>
+    <ul class="ticks"><li>반복 사냥으로 파티 성장과 보상 획득을 자동화</li><li>헥스 맵 기반 영토 진출 · 점령의 4X 전략 레이어</li><li>식량 · 나무 · 돌 · 금 자원 구조와 영토 확장 연계</li></ul>
+  </div>
+</article></div>
+
+<div class="lab-sub reveal"><p class="kicker">Balance Tools</p><h3>전투 · 성장 밸런스 시뮬레이터</h3></div>
+<article class="case lab-sim reveal">
+  <div class="case-text">
+    <div class="prose"><p>게임은 아니지만, 향후 관련 실무를 진행할 때 바로 활용하기 위해 만든 툴입니다. 전투와 성장 수치를 슬라이더로 조정하면 그래프와 결과가 실시간으로 바뀌어 비교 · 분석할 수 있고, 실제 시뮬레이션을 돌려 취합된 로그를 분석할 수 있도록 했습니다.</p></div>
+    <ul class="ticks"><li>TTK &amp; 방어 공식 비교 — 감산식 · 제산식에 따른 1타 피해, 실질 체력(EHP), 처치 시간(TTK) 비교</li><li>확률 · 가챠 — 1만 명 시뮬레이션으로 평균이 아닌 ‘운 나쁜 유저’의 경험과 천장(Pity) 효과 분석</li><li>성장 곡선 — 수열 종류별 성장 수치를 실제 웨이브 전투로 돌려 보고 A/B 비교</li><li>시뮬레이션 결과 로그 취합 및 CSV 내보내기</li></ul>
+  </div>
+  <div class="case-docs"><div class="dg"><div class="just gal"><figure class="zf" style="--r:1.3554"><button type="button" class="zoom" data-full="img/ai-sim-ttk.webp" data-cap="전투 TTK &amp; 방어 공식 비교 시뮬레이터" aria-label="전투 TTK &amp; 방어 공식 비교 시뮬레이터 크게 보기"><img src="img/ai-sim-ttk.t.webp" alt="전투 TTK &amp; 방어 공식 비교 시뮬레이터" width="900" height="664" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.1436"><button type="button" class="zoom" data-full="img/ai-sim-gacha.webp" data-cap="확률 · 가챠 시뮬레이터" aria-label="확률 · 가챠 시뮬레이터 크게 보기"><img src="img/ai-sim-gacha.t.webp" alt="확률 · 가챠 시뮬레이터" width="900" height="787" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure><figure class="zf" style="--r:1.1378"><button type="button" class="zoom" data-full="img/ai-sim-wave.webp" data-cap="성장 곡선 웨이브 시뮬레이터" aria-label="성장 곡선 웨이브 시뮬레이터 크게 보기"><img src="img/ai-sim-wave.t.webp" alt="성장 곡선 웨이브 시뮬레이터" width="900" height="791" loading="lazy" decoding="async"><span class="zi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></button></figure></div></div></div>
+</article>
+
+<div class="lab-sub reveal"><p class="kicker">Work Tools</p><h3>업무 효율을 높이는 자체 제작 툴</h3>
+  <p class="sec-sub">회사 보안 정책 안에서 HTML 기반으로 직접 만들어, 실제 업무에 활용하고 있습니다.</p></div>
+<div class="tool-grid"><a class="tool-card reveal" href="#content-03"><span class="tool-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span><h4>크래프팅 계산기</h4><p>제작식 트리 조회, 결과물 가치 자동 계산, 데이터 연결 오류 자동 검증까지 — 팀 크래프팅 데이터 작업에 실제로 사용 중인 툴입니다.</p><span class="tool-go">상세 사례 보기 →</span></a><div class="tool-card reveal"><span class="tool-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span><h4>아트 리소스 발주 관리</h4><p>아트 리소스 요청과 발주 현황을 한 곳에서 등록 · 관리할 수 있도록 만든 업무 툴입니다.</p></div><div class="tool-card reveal"><span class="tool-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span><h4>개인 업무 대시보드</h4><p>흩어져 있는 업무 현황을 한눈에 확인할 수 있도록 만든 대시보드입니다.</p></div></div>
+  </div>
+</section>
+</main>
+
+<footer class="end" id="contact">
+  <div class="wrap end-in reveal">
+    <p class="kicker">07 — Contact</p>
+    <h2 class="thanks">Thank you.</h2>
+    <p class="sec-sub">끝까지 봐주셔서 감사합니다. 편하게 연락 주세요.</p>
+    <div class="contacts">
+      <a class="ccard" href="mailto:dontback84@gmail.com"><span class="cl">E-mail</span><span class="cv">dontback84@gmail.com</span></a>
+      <a class="ccard" href="tel:01050024849"><span class="cl">Phone</span><span class="cv">010-5002-4849</span></a>
+    </div>
+    <p class="copy">© Jinkyu Choi · 최진규. 포트폴리오에 포함된 게임 이미지와 문서의 권리는 각 저작권자에게 있습니다.</p>
+  </div>
+</footer>
+
+<a class="totop" href="#top" aria-label="맨 위로 이동">
+  <span class="ring" aria-hidden="true"><svg viewBox="0 0 44 44"><circle class="rb" cx="22" cy="22" r="19"/><circle class="rf" id="ringFg" cx="22" cy="22" r="19"/></svg><span class="pct" id="pct">0%</span></span>
+  <span class="tt-txt" aria-hidden="true"><span class="tt-l">현재 위치</span><span class="tt-sec" id="ttSec">Intro</span></span>
+  <svg class="tt-up" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="이미지 크게 보기" hidden>
+  <div class="lb-top"><span class="lb-count" id="lbCount"></span><span class="lb-hint">클릭하면 원본 크기 · ←/→ 이동 · Esc 닫기</span>
+    <button class="lb-btn" id="lbClose" type="button" aria-label="닫기"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="이전 이미지"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="다음 이미지"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* theme toggle */
+  $('#theme').addEventListener('click', function () {
+    var cur = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('jc-theme', next); } catch (e) {}
+  });
+
+  /* mobile menu */
+  var menu = $('#menu'), links = $('#navlinks');
+  function closeMenu() { links.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }
+  menu.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    menu.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  $$('a', links).forEach(function (a) { a.addEventListener('click', closeMenu); });
+
+  /* scroll: progress, nav border, to-top */
+  var bar = $('.progress span'), nav = $('.nav'), top = $('.totop'), ticking = false;
+  var ring = $('#ringFg'), pct = $('#pct'), secLabel = $('#ttSec'), CIRC = 119.38;
+  var secs = $$('[data-nav]').map(function (a) { return { el: document.getElementById(a.dataset.nav), name: a.textContent }; });
+  function onScroll() {
+    var h = document.documentElement.scrollHeight - innerHeight;
+    var y = scrollY;
+    var p = h > 0 ? Math.min(1, Math.max(0, y / h)) : 0;
+    bar.style.transform = 'scaleX(' + p + ')';
+    ring.style.strokeDashoffset = (CIRC * (1 - p)).toFixed(2);
+    pct.textContent = Math.round(p * 100) + '%';
+    var cur = 'Intro', line = innerHeight * 0.45;
+    secs.forEach(function (s) { if (s.el && s.el.getBoundingClientRect().top <= line) cur = s.name; });
+    if (p > 0.995) cur = secs[secs.length - 1].name;
+    secLabel.textContent = cur;
+    top.setAttribute('aria-label', '맨 위로 이동 (현재 ' + Math.round(p * 100) + '% · ' + cur + ')');
+    nav.classList.toggle('scrolled', y > 8);
+    top.classList.toggle('show', y > 200);
+    ticking = false;
+  }
+  addEventListener('resize', onScroll, { passive: true });
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  /* scrollspy + reveal */
+  if ('IntersectionObserver' in window) {
+    var navMap = {};
+    $$('[data-nav]').forEach(function (a) { navMap[a.dataset.nav] = a; });
+    var spy = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (en.isIntersecting) {
+          $$('[data-nav]').forEach(function (a) { a.classList.remove('on'); });
+          var a = navMap[en.target.id]; if (a) a.classList.add('on');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(navMap).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+
+    var rev = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); rev.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.04 });
+    $$('.reveal').forEach(function (el) { rev.observe(el); });
+  } else {
+    $$('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* lightbox */
+  var lb = $('#lb'), img = $('#lbImg'), cap = $('#lbCap'), cnt = $('#lbCount'), stage = $('#lbStage');
+  var set = [], idx = 0, lastFocus = null;
+  function show(i) {
+    idx = (i + set.length) % set.length;
+    var b = set[idx];
+    stage.classList.remove('full');
+    img.src = b.dataset.full;
+    img.alt = b.dataset.cap;
+    cap.textContent = b.dataset.cap;
+    cnt.textContent = (idx + 1) + ' / ' + set.length;
+    var multi = set.length > 1;
+    $('#lbPrev').hidden = !multi; $('#lbNext').hidden = !multi;
+  }
+  function open(btn) {
+    var g = btn.closest('.gal');
+    set = g ? $$('.zoom', g) : [btn];
+    lastFocus = btn;
+    lb.hidden = false;
+    document.body.classList.add('lb-open');
+    show(set.indexOf(btn));
+    $('#lbClose').focus();
+  }
+  function close() {
+    lb.hidden = true;
+    document.body.classList.remove('lb-open');
+    img.removeAttribute('src');
+    if (lastFocus) lastFocus.focus();
+  }
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest('.zoom');
+    if (b) { ev.preventDefault(); open(b); }
+  });
+  $('#lbClose').addEventListener('click', close);
+  $('#lbPrev').addEventListener('click', function () { show(idx - 1); });
+  $('#lbNext').addEventListener('click', function () { show(idx + 1); });
+  img.addEventListener('click', function (ev) { ev.stopPropagation(); stage.classList.toggle('full'); });
+  stage.addEventListener('click', function (ev) { if (ev.target === stage) close(); });
+  document.addEventListener('keydown', function (ev) {
+    if (lb.hidden) return;
+    if (ev.key === 'Escape') close();
+    else if (ev.key === 'ArrowLeft' && set.length > 1) show(idx - 1);
+    else if (ev.key === 'ArrowRight' && set.length > 1) show(idx + 1);
+    else if (ev.key === 'Tab') {
+      var f = $$('button:not([hidden])', lb);
+      var first = f[0], last = f[f.length - 1];
+      if (ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
+      else if (!ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
+    }
+  });
+  /* swipe on touch */
+  var sx = null;
+  stage.addEventListener('touchstart', function (ev) { sx = ev.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend', function (ev) {
+    if (sx === null || stage.classList.contains('full') || set.length < 2) return;
+    var dx = ev.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+    sx = null;
+  });
+})();
+
+</script>
+</body>
+</html>
